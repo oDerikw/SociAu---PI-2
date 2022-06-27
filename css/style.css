@@ -429,6 +429,15 @@ a:focus {
   padding: 0;
 }
 
+.portfolio_section .rowq {
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+
 .portfolio_section .img-box {
   position: relative;
   margin: 10px;
@@ -478,7 +487,7 @@ a:focus {
           transform: translate(-50%, -50%);
   width: 0;
   height: 0;
-  background-color: rgba(37, 28, 229, 0.8);
+  background-color: rgba(245, 245, 245, 0.8);
   border-radius: 25px;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
