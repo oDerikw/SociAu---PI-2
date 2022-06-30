@@ -65,7 +65,7 @@ body {
 }
 
 .header_section {
-  background-color: #1e025b;
+  background-color: #ffffff;
   padding: 10px 0;
 }
 
@@ -90,18 +90,35 @@ body {
   margin: 0 10px 0 20px;
 }
 
-.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
-  padding: 10px 20px;
-  color: #dbdada;
-  text-align: center;
-  text-transform: uppercase;
+/* Blue Bars */
+.nav-link{
+  position: relative;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+}
+.nav-link:after{
+  content: "";
+  position: absolute;
+  background-color: #42cefe;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.nav-link:hover{
+  color: #42cefe;
+}
+.nav-link:hover:after{
+  width: 100%;
 }
 
-.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link:hover {
-  color: #ffffff;
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  text-decoration: underline;
+.menu-urls {
+  border-bottom: 3px solid #d8d8d8;
 }
 
 a,
@@ -135,17 +152,6 @@ a:focus {
   font-size: 24px;
   font-weight: 700;
   color: #ffffff;
-}
-
-.custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
-  background-size: 22px;
-  background-repeat: no-repeat;
-  background-position-y: 7px;
-  width: 35px;
-  height: 35px;
-  padding: 0;
-  border: none;
 }
 
 .navbar-brand {
@@ -248,7 +254,7 @@ a:focus {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #a454fd, #2b05df);
+  background: linear-gradient(135deg, #2f01fc, #00ff55);
   z-index: 3;
   -webkit-clip-path: polygon(0 0, 60% 0, 37% 100%, 0% 100%);
           clip-path: polygon(0 0, 60% 0, 37% 100%, 0% 100%);
@@ -277,7 +283,7 @@ a:focus {
 
 .slider_section .carousel-control-next {
   background-image: url(../images/next.png);
-  background-color: #2e02fe;
+  background-color: #00a2ff;
   top: calc(50% - 30px);
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -397,7 +403,7 @@ a:focus {
   height: 55%;
   top: 0;
   left: 0;
-  background-image: url(../images/service-bg.jpg);
+  background-image: url(../images/service-tg.png);
   z-index: -1;
 }
 
@@ -469,7 +475,7 @@ a:focus {
   margin-left: 250px;
 }
 
-/* */
+/* Especialistas */
 
 .news_section h2,
 .news_section p,
@@ -521,66 +527,6 @@ a:focus {
   display: inline-block;
   font-weight: bold;
   margin-top: 45px;
-}
-
-/* Subscribe */
-
-.subscribe_section {
-  background-color: #021056;
-}
-
-.subscribe_section .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.subscribe_section h2,
-.subscribe_section button {
-  font-family: "Poppins", sans-serif;
-}
-
-.subscribe_section h2 {
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.subscribe_section h2 span {
-  text-transform: none;
-  font-weight: bold;
-}
-
-.subscribe_section form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.subscribe_section form input {
-  border: none;
-  min-width: 100%;
-  height: 55px;
-  background-color: #ffffff;
-  padding: 0 20px;
-  border-radius: 50px;
-  outline: none;
-}
-
-.subscribe_section form button {
-  border: none;
-  padding: 0 60px;
-  height: 40px;
-  border-radius: 35px;
-  color: #ffffff;
-  background-color: #0000ff;
-  -webkit-transform: translate(-104%, 7.5px);
-          transform: translate(-104%, 7.5px);
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.subscribe_section form button:hover {
-  background-color: #0000cc;
 }
 
 /* Difficultes */
