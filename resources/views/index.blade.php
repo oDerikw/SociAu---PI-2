@@ -15,8 +15,8 @@
 
   <!-- Refs / styles -->
   <link rel="stylesheet" type="text/css"/>
-  <link href="css/style.css" rel="stylesheet" />
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="./../css/style.css" rel="stylesheet" />
+  <link href="./../css/responsive.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
 </head>
