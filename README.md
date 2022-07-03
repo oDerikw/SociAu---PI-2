@@ -1,4 +1,2 @@
-<<<<<<< HEAD
 # SociAu -
 Projeto Integrador.
-=======
