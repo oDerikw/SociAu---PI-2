@@ -24,6 +24,7 @@ Route::get('/jogar', function () {
 Route::get('/jogar/dificuldade', function () {
     return view('diffQuiz');
 });
+
 /*
 Route::get('/', function () {
     return view('welcome');
