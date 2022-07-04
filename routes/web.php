@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/jogar', function () {
+    return view('homeQuiz');
+});
+
 /*
 Route::get('/', function () {
     return view('welcome');
