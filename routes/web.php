@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/jogar', function () {
+    return view('homeQuiz');
+});
+
+Route::get('/jogar/dificuldade', function () {
+    return view('diffQuiz');
+});
 /*
 Route::get('/', function () {
     return view('welcome');
