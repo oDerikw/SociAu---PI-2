@@ -61,28 +61,28 @@
       <div class="rowq">
         <div class="col-md-4">
           <div class="img-box">
-            <a href="diffQuiz.html">
+            <a href="{{ route('diffQuiz') }}">
               <img src="images/p-blue2.png" height="360px" alt="">
             </a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="img-box">
-            <a href="diffQuiz.html">
+            <a href="{{ route('diffQuiz') }}">
               <img src="images/p-yellow2.png" height="370px" alt="">
             </a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="img-box">
-            <a href="diffQuiz.html">
+            <a href="{{ route('diffQuiz') }}">
               <img src="images/p-red2.png" height="390px" alt="">
             </a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="img-box">
-            <a href="diffQuiz.html">
+            <a href="{{ route('diffQuiz') }}">
               <img src="images/p-green2.png" height="360px" alt="">
             </a>
           </div>

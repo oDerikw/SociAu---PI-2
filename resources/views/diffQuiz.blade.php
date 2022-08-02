@@ -22,19 +22,19 @@
           <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
             <ul class="navbar-nav  ">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Início</a>
+                <a class="nav-link" href="{{ route('index') }}">Início</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Sobre </a>
+                <a class="nav-link" href="{{ route('index') }}">Sobre </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Serviços </a>
+                <a class="nav-link" href="{{ route('index') }}">Serviços </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html"> Ajuda </a>
+                <a class="nav-link" href="{{ route('index') }}"> Ajuda </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Contato</a>
+                <a class="nav-link" href="{{ route('index') }}">Contato</a>
               </li>
             </ul>
           </div>
@@ -59,21 +59,21 @@
       <div class="rowq">
         <div class="col-md-4">
           <div class="diff-box">
-            <a href="index.html">
+            <a href="{{ route('index') }}">
               Fácil
             </a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="diff-box">
-            <a href="index.html">
+            <a href="{{ route('index') }}">
               Médio
             </a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="diff-box">
-            <a href="index.html">
+            <a href="{{ route('index') }}">
               Difícil
             </a>
           </div>

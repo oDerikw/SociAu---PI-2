@@ -15,15 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::get('/jogar', function () {
     return view('homeQuiz');
-});
+})->name('homeQuiz');
 
 Route::get('/jogar/dificuldade', function () {
     return view('diffQuiz');
-});
+})->name('diffQuiz');
 
 /*
 Route::get('/', function () {
