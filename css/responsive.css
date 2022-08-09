@@ -37,6 +37,21 @@
     height: 400px;
   }
 
+  .meio{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button-grp-diff{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .diff-gif {
+    margin-left: 23%;
+  }
+
   .service_section .service_container {
     flex-wrap: wrap;
     justify-content: center;
@@ -77,24 +92,16 @@
     width: 550px;
     height: 300px;
   }
-
-  .meio{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .texto{
-    order: 1;
-  }
-  .btn-wrap{
-    order: 2;
-  }
 }
 
 @media (max-width: 768px) {
   .btn-wrap .homep{
     width: 450px;
     height: 250px;
+  }
+
+  .diff-gif {
+    margin-left: 15%;
   }
 
   .client_section .client_container {
@@ -127,6 +134,10 @@
   .btn-wrap .homep{
     width: 450px;
     height: 250px;
+  }
+
+  .diff-gif {
+    margin-left: 0%;
   }
 
   .custom_heading-container hr {
