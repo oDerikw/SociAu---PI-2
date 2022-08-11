@@ -18,21 +18,21 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav">
+              <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#index">Início </a>
+                  <a class="nav-link" href="{{ route('index') }}">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#about">Sobre </a>
+                  <a class="nav-link" href="{{ url('/#about') }}">Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#services">Serviços </a>
+                  <a class="nav-link" href="{{ url('/#services') }}">Serviços </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#help"> Ajuda </a>
+                  <a class="nav-link" href="{{ url('/#help') }}"> Ajuda </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contato</a>
+                  <a class="nav-link" href="{{ url('/#contact') }}">Contato</a>
                 </li>
               </ul>
             </div>
@@ -52,7 +52,7 @@
 
         <div class="btn-wrap">
           <img class="homep" width="100%" src="images/Home.png">
-          <a href="{{ route('index') }}">
+          <a href="{{ route('jogar') }}">
           <button class="homeb"><img class="homebb" src="images/play.png" height="">PLAY</button></a>
         </div>
         

@@ -19,19 +19,19 @@
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Início</a>
+                  <a class="nav-link" href="{{ route('index') }}">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Sobre </a>
+                  <a class="nav-link" href="{{ url('/#about') }}">Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Serviços </a>
+                  <a class="nav-link" href="{{ url('/#services') }}">Serviços </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html"> Ajuda </a>
+                  <a class="nav-link" href="{{ url('/#help') }}"> Ajuda </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Contato</a>
+                  <a class="nav-link" href="{{ url('/#contact') }}">Contato</a>
                 </li>
               </ul>
             </div>
@@ -59,9 +59,9 @@
   <div class="quiz_section_red">
     <div class="quiz">
             <div class="button-grp-diff">
-                <a href="quizAzul.html" id="btn9">Fácil</span></a>
-                <a href="quizAzul.html" id="btn10">Médio</span></a>
-                <a href="quizAzul.html" id="btn11">Difícil</span></a>
+              <a href="{{ route('quiz') }}" id="btn1">Fácil</span></a>
+              <a href="{{ route('quiz') }}" id="btn2">Médio</span></a>
+              <a href="{{ route('quiz') }}" id="btn3">Difícil</span></a>
             </div>
             <div class="diff-gif">
               <img src="images/a-rosinha.png" height="500px">

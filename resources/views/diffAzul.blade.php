@@ -7,7 +7,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
 
           <a class="navbar-brander">
-            <img src="images/logo.png" width="150px">
+            <img src="/images/logo.png" width="150px">
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -19,19 +19,19 @@
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Início</a>
+                  <a class="nav-link" href="{{ route('index') }}">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Sobre </a>
+                  <a class="nav-link" href="{{ url('/#about') }}">Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Serviços </a>
+                  <a class="nav-link" href="{{ url('/#services') }}">Serviços </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html"> Ajuda </a>
+                  <a class="nav-link" href="{{ url('/#help') }}"> Ajuda </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Contato</a>
+                  <a class="nav-link" href="{{ url('/#contact') }}">Contato</a>
                 </li>
               </ul>
             </div>
@@ -59,12 +59,12 @@
   <div class="quiz_section">
     <div class="quiz">
             <div class="button-grp-diff">
-                <a href="quizAzul.html" id="btn1">Fácil</span></a>
-                <a href="quizAzul.html" id="btn2">Médio</span></a>
-                <a href="quizAzul.html" id="btn3">Difícil</span></a>
+                <a href="{{ route('quiz') }}" id="btn1">Fácil</span></a>
+                <a href="{{ route('quiz') }}" id="btn2">Médio</span></a>
+                <a href="{{ route('quiz') }}" id="btn3">Difícil</span></a>
             </div>
             <div class="diff-gif">
-              <img src="images/a-azul.png" height="500px">
+              <img src="/images/a-azul.png" height="500px">
             </div>
         </div>
     </div>
@@ -78,17 +78,17 @@
       <div class="info_social">
         <div>
           <a href="">
-            <img src="images/fb.png" alt="">
+            <img src="/images/fb.png" alt="">
           </a>
         </div>
         <div>
           <a href="">
-            <img src="images/twitter.png" alt="">
+            <img src="/images/twitter.png" alt="">
           </a>
         </div>
         <div>
           <a href="">
-            <img src="images/insta.png" alt="">
+            <img src="/images/insta.png" alt="">
           </a>
         </div>
       </div>

@@ -19,19 +19,19 @@
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Início</a>
+                  <a class="nav-link" href="{{ route('index') }}">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Sobre </a>
+                  <a class="nav-link" href="{{ url('/#about') }}">Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Serviços </a>
+                  <a class="nav-link" href="{{ url('/#services') }}">Serviços </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html"> Ajuda </a>
+                  <a class="nav-link" href="{{ url('/#help') }}"> Ajuda </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Contato</a>
+                  <a class="nav-link" href="{{ url('/#contact') }}">Contato</a>
                 </li>
               </ul>
             </div>
@@ -58,28 +58,28 @@
         <div class="rowq">
           <div class="col-md-4">
             <div class="img-box">
-              <a href="diffAzul.html">
+              <a href="{{ route('blue') }}">
                 <img src="images/blocoAzul.png" alt="">
               </a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="img-box">
-              <a href="diffAmarelo.html">
+              <a href="{{ route('yellow') }}">
                 <img src="images/blocoAmarelo.png" alt="">
               </a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="img-box">
-              <a href="diffRosa.html">
+              <a href="{{ route('red') }}">
                 <img src="images/blocoRosa.png" alt="">
               </a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="img-box">
-              <a href="diffVerde.html">
+              <a href="{{ route('green') }}">
                 <img src="images/blocoVerde.png" alt="">
               </a>
             </div>
