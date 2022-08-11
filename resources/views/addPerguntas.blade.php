@@ -1,7 +1,7 @@
 <link href="../css/style.css" rel="stylesheet" />
 <link href="../css/responsive.css" rel="stylesheet" />
 <br><br><br>
-<form name="formAdd" id="formAdd" method="post" action="<?php echo DIRPAGE.'controllers/ControllerAdd.php'; ?>">
+<form name="formAdd" id="formAdd" method="post" action="">
         
     <h2>CADASTRAR QUESTÃO</h2>
     <p type="Categoria"><input type="text" name="cpf" id="cpf" ></p>
