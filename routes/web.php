@@ -48,3 +48,9 @@ Route::get('/quiz', function () {
 Route::get('/pais', function() {
     return view('parents');
 })->name('parents');
+
+Route::get('/addPerguntas', function() {
+    return view('addPerguntas');
+})->middleware(['auth'])->name('addPerguntas');
+
+require __DIR__.'/auth.php';
