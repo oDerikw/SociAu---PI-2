@@ -62,101 +62,50 @@
       </div>
     </header>
 
-    <br><br>
-
-  <!-- Home -->
-  <section class="home_section" id="help">
-    <div class="container">
-      <div class="custom_heading-container">
-        <h2>
-          Modalidades
-        </h2>
-        <hr>
-      </div>
-      <p>
-        Escolha a modalidade para jogar:
-      </p>
-      <div class="layout_padding2-top">
-        <div class="rowq">
-          <div class="col-md-4">
-            <div class="img-box">
-              <a href="diffAzul.html">
-                <img src="images/blocoAzul.png" alt="">
+   
+    <div class="quiz_section">
+      <div class="quiz">
+        <div class="topoQuiz">
+          <div class="quiz_categoria">
+              <a>
+                  Empatia
               </a>
-            </div>
           </div>
-          <div class="col-md-4">
-            <div class="img-box">
-              <a href="diffAmarelo.html">
-                <img src="images/blocoAmarelo.png" alt="">
-              </a>
+          <div class="barra">
+            <!--Step active ja foi visitado -->
+            <div class= "step active">
+              <div class= "--number"></div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="img-box">
-              <a href="diffRosa.html">
-                <img src="images/blocoRosa.png" alt="">
-              </a>
+            <div class= "step active">
+              <div class= "--number"></div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="img-box">
-              <a href="diffVerde.html">
-                <img src="images/blocoVerde.png" alt="">
-              </a>
+            <div class= "step active">
+              <div class= "--number"></div>
             </div>
+            <!--Step não foi visitado -->
+            <div class= "step">
+              <div class= "--number"></div>
+            </div>
+            <div class= "step">
+              <div class= "--number"></div>
+            </div>
+              
           </div>
         </div>
+          <br><br>
+          <div class="pergunta">
+              <a>
+                  Se eu vir uma pessoa chorando, o que devo fazer?
+              </a>
+              <img src="images/meninaChorando.png" height="500px">
+              <div class="button-grp">
+                  <button id="btn1"><span id="choice0">Rir</span></button>
+                  <button id="btn2"><span id="choice1">Oferecer ajuda</span></button>
+                  <button id="btn3"><span id="choice2">Gritar</span></button>
+                  <button id="btn4"><span id="choice3">Sair Correndo</span></button>
+              </div>
+          </div>
       </div>
-      <div class="layout_logo">
-        <img class="bag_logo" src="images/logo.png" height="100px" alt="">
-      </div>
-    </div>
-  </section>
-
-  <br><br>
-
-  <!-- Infos -->
-  <section class="info_section layout_padding">
-    <div class="container">
-      <div class="info_social">
-        <div>
-          <a href="">
-            <img src="images/fb.png" alt="">
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img src="images/twitter.png" alt="">
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img src="images/insta.png" alt="">
-          </a>
-        </div>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <section class="container-fluid footer_section">
-    <p>
-      &copy; 2022 All Rights Reserved By
-      <a href="index.html">SociAu</a>
-    </p>
-  </section>
-
-  <!-- Scripts -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-
+      
+  </div>
 </body>
-
-</html>

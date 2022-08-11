@@ -64,53 +64,83 @@
 
     <br><br>
 
-  <!-- Home -->
-  <section class="home_section" id="help">
+  <!-- Text -->
+  <section class="portfolio_section" id="help">
     <div class="container">
       <div class="custom_heading-container">
         <h2>
-          Modalidades
+          Para os pais...
         </h2>
         <hr>
       </div>
       <p>
-        Escolha a modalidade para jogar:
+        Algumas informações básicas que em caso de uso do sistema sem supervisão profissional, podem ser adquiridas.
       </p>
-      <div class="layout_padding2-top">
-        <div class="rowq">
-          <div class="col-md-4">
-            <div class="img-box">
-              <a href="diffAzul.html">
-                <img src="images/blocoAzul.png" alt="">
-              </a>
+    </div>
+  </section>
+
+  <!-- Info 1 -->
+  <section class="about_section layout_padding" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h6>
+              Sobre
+            </h6>
+            <div class="custom_heading-container">
+              <h2>
+                Transtorno do Espectro Autista
+              </h2>
+              <hr>
             </div>
+            <p>
+               O Transtorno do Espectro Autista é definido como uma desordem do neurodesenvolvimento, 
+              tendo como uma de suas características principais a dificuldade na comunicação social. 
+              Dessa forma, um dos aspectos mais comuns apresentados por pessoas no espectro é um déficit, 
+              em maior ou menor grau, nesse conjunto de comportamentos sociais.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="img-box">
-              <a href="diffAmarelo.html">
-                <img src="images/blocoAmarelo.png" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="img-box">
-              <a href="diffRosa.html">
-                <img src="images/blocoRosa.png" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="img-box">
-              <a href="diffVerde.html">
-                <img src="images/blocoVerde.png" alt="">
-              </a>
-            </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
           </div>
         </div>
       </div>
-      <div class="layout_logo">
-        <img class="bag_logo" src="images/logo.png" height="100px" alt="">
+    </div>
+  </section>
+
+  <!-- Info 2 -->
+  <section class="about_section layout_padding" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h6>
+              Sobre
+            </h6>
+            <div class="custom_heading-container">
+              <h2>
+                Transtorno do Espectro Autista
+              </h2>
+              <hr>
+            </div>
+            <p>
+               O Transtorno do Espectro Autista é definido como uma desordem do neurodesenvolvimento, 
+              tendo como uma de suas características principais a dificuldade na comunicação social. 
+              Dessa forma, um dos aspectos mais comuns apresentados por pessoas no espectro é um déficit, 
+              em maior ou menor grau, nesse conjunto de comportamentos sociais.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
