@@ -19,14 +19,32 @@ Route::get('/', function () {
 
 Route::get('/jogar', function () {
     return view('homeQuiz');
-})->name('homeQuiz');
+})->name('jogar');
 
 Route::get('/jogar/dificuldade', function () {
     return view('diffQuiz');
 })->name('diffQuiz');
 
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
+Route::get('/jogar/azul', function () {
+    return view('diffAzul');
+})->name('blue');
+
+Route::get('/jogar/amarelo', function () {
+    return view('diffAmarelo');
+})->name('yellow');
+
+Route::get('/jogar/vermelho', function () {
+    return view('diffRosa');
+})->name('red');
+
+Route::get('/jogar/verde', function () {
+    return view('diffVerde');
+})->name('green');
+
+Route::get('/quiz', function () {
+    return view('quizAzul');
+})->name('quiz');
+
+Route::get('/pais', function() {
+    return view('parents');
+})->name('parents');
