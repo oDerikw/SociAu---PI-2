@@ -1,45 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-  <div class="hero_area">
-    <!-- Header -->
-    <header class="header_section menu-urls">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-
-          <a class="navbar-brander">
-            <img src="images/logo.png" width="150px">
-          </a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="{{ route('index') }}">Início</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/#about') }}">Sobre </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/#services') }}">Serviços </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/#help') }}"> Ajuda </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/#contact') }}">Contato</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-
+  
   <!-- Header Desc -->
   <div class="difficultes_section">
     <div class="container">
@@ -59,12 +20,12 @@
   <div class="quiz_section_red">
     <div class="quiz">
             <div class="button-grp-diff">
-              <a href="{{ route('quiz') }}" id="btn1">Fácil</span></a>
-              <a href="{{ route('quiz') }}" id="btn2">Médio</span></a>
-              <a href="{{ route('quiz') }}" id="btn3">Difícil</span></a>
+              <a href="{{ route('quiz3') }}" id="btn9">Fácil</span></a>
+              <a href="{{ route('quiz3') }}" id="btn10">Médio</span></a>
+              <a href="{{ route('quiz3') }}" id="btn11">Difícil</span></a>
             </div>
             <div class="diff-gif">
-              <img src="images/a-rosinha.png" height="500px">
+              <img src="/images/a-rosinha.png" height="500px">
             </div>
         </div>
     </div>
@@ -78,17 +39,17 @@
       <div class="info_social">
         <div>
           <a href="">
-            <img src="images/fb.png" alt="">
+            <img src="/images/fb.png" alt="">
           </a>
         </div>
         <div>
           <a href="">
-            <img src="images/twitter.png" alt="">
+            <img src="/images/twitter.png" alt="">
           </a>
         </div>
         <div>
           <a href="">
-            <img src="images/insta.png" alt="">
+            <img src="/images/insta.png" alt="">
           </a>
         </div>
       </div>
