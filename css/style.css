@@ -307,6 +307,48 @@ a:focus {
   margin: 0;
 }
 
+/* Parents */
+.parents_section {
+  font-family: "Poppins", sans-serif;
+}
+
+.parents_section .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parents_section a {
+  display: inline-block;
+  padding: 8px 25px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+  border-radius: 25px;
+  margin-top: 45px;
+}
+
+.parents_section a:hover {
+  background-color: transparent;
+  color: #000000;
+}
+
+.parents_section p {
+  margin-top: 45px;
+}
+
+.parents_section h6 {
+  text-transform: uppercase;
+  color: #bdbbbb;
+  font-weight: bold;
+  margin: 0;
+}
+
+.parents_section .detail-box{
+  align-items: end;
+}
+
+/* Service */
 .service_section {
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -623,7 +665,7 @@ a:focus {
 .info_section {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  background-color: #021056;
+  background-color: #007bff;
   color: #ffffff;
 }
 
