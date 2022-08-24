@@ -15,12 +15,10 @@ return new class extends Migration
     {
         Schema::create('table_alternatives', function (Blueprint $table) {
             $table->id();
-            $table->string('Alternative',50);
+            $table->string('alternative',50);
             $table->boolean('isCorrect');
             $table->text('explanation');
-            $table->interger('idQuestion')->unsigned();
-            //criar a relaçaõ
-            //$table->foreing('idQuestion')->references('id')->on('Alternatives')->onDelete('cascade');
+            $table->integer('idQuestion')->unsigned();
             $table->foreingId('idQuestion')->constrained()-onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();

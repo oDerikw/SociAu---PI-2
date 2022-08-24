@@ -15,13 +15,11 @@ return new class extends Migration
     {
         Schema::create('table_question', function (Blueprint $table) {
             $table->id();
-            $table->text('Question');
-            $table->varchar('imagem');
-            $table->string('Category',50);
-            $table->interger('Admin_id')->unsigned();
-            //criar a relaçaõ
-            //$table->foreing('Admin_id')->references('id')->on('Admin'))->onDelete('cascade');
-            $table->foreingId('Admin_id')->constrained()->onDelete('cascade');
+            $table->text('question');
+            $table->varchar('image');
+            $table->string('category',50);
+            $table->integer('admin_id')->unsigned();
+            $table->foreingId('admin_id')->constrained()->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });
