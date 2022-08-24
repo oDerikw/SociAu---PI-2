@@ -24,7 +24,6 @@ return new class extends Migration
             $table->foreingId('Admin_id')->constrained()->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
-           
         });
     }
 
