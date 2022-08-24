@@ -1,83 +1,66 @@
 @media (min-width: 2000px) {
-
   .btn-wrap .homep{
     width: 750px;
     height: 400px;
   }
-
   .container {
     max-width: 1170px;
   }
-
   .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
     padding: 10px 30px;
   }
 }
 
 @media (max-width: 1500px) {
-
   .start_section h1, h2 {
     font-size: 2.5rem;
   }
-
   .btn-wrap .homep{
     width: 750px;
     height: 400px;
   }
-
   .quote_btn-container a {
     display: none;
   }
 }
 
 @media (max-width: 992px) {
-
   .btn-wrap .homep{
     width: 700px;
     height: 400px;
   }
-
   .meio{
     display: flex;
     flex-direction: column;
   }
-
   .button-grp-diff{
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-
   .diff-gif {
     margin-left: 23%;
   }
-
   .service_section .service_container {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .service_section .box {
     margin: 25px;
   }
-
   .service_section .box .name h6 {
     color: #ffffff;
   }
-
   .service_section::before {
     height: 100%;
   }
-
   .home_section {
     padding-top: 75px;
   }
-
   .contact_items {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .contact_items .item {
     margin: 20px;
   }
@@ -92,6 +75,7 @@
     width: 550px;
     height: 300px;
   }
+  
 }
 
 @media (max-width: 768px) {
@@ -104,19 +88,6 @@
     margin-left: 15%;
   }
 
-  .client_section .client_container {
-    width: 100%;
-  }
-
-  .client_section .client_container .box {
-    margin: 20px 15px;
-  }
-
-  .client_section .carousel-control-prev,
-  .client_section .carousel-control-next {
-    display: none;
-  }
-
   .subscribe_section form {
     margin-top: 25px;
   }
@@ -127,6 +98,10 @@
 
   .contact_section .contact_form-container input {
     width: 100%;
+  }
+  .rowq{
+    display: flex;
+    flex-direction: column;
   }
 }
 
