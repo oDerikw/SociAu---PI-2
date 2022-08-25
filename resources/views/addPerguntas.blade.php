@@ -1,8 +1,14 @@
 <link href="../css/style.css" rel="stylesheet" />
 <link href="../css/responsive.css" rel="stylesheet" />
 <br><br><br>
+
+<form action="{{ route('logout') }}" method="post">
+    @csrf
+    <button type="submit">Logout</button>
+</form>
+
 <form name="formAdd" id="formAdd" method="post" action="">
-        
+    @csrf
     <h2>CADASTRAR QUESTÃO</h2>
     <p type="Categoria"><input type="text" name="cpf" id="cpf" ></p>
         
@@ -48,7 +54,7 @@
     </label>
     <br>
 
-    <input type="submit" value="Enviar">
+    <button type="submit"></button>
     </form>
 
 
