@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('alternative',50);
             $table->boolean('isCorrect');
             $table->text('explanation');
-            $table->integer('idQuestion')->unsigned();
-            $table->foreingId('idQuestion')->constrained()-onDelete('cascade');
+            $table->foreignId('question_id')->constrained()->cascadeOnDelete();
             $table->rememberToken();
             $table->timestamps();
         });
