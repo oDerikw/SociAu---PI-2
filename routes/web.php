@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegisterQuestionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,8 +50,6 @@ Route::get('/pais', function() {
     return view('parents');
 })->name('parents');
 
-Route::get('/addPerguntas', function() {
-    return view('addPerguntas');
-})->middleware(['auth'])->name('addPerguntas');
+Route::get('/cadastro-perguntas', [RegisterQuestionController::class, 'create']);
 
 require __DIR__.'/auth.php';
