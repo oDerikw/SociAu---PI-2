@@ -50,6 +50,10 @@ Route::get('/pais', function() {
     return view('parents');
 })->name('parents');
 
-Route::get('/cadastro-perguntas', [RegisterQuestionController::class, 'create']);
+Route::middleware('auth')->group(function () {
+    Route::get('/cadastro-perguntas', [RegisterQuestionController::class, 'create'])->name('questionRegister');
+    Route::post('/cadastro-perguntas', [RegisterQuestionController::class, 'store'])->name('questionRegister');
+});
+    
 
 require __DIR__.'/auth.php';
