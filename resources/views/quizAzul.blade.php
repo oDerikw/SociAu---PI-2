@@ -73,18 +73,16 @@
           <br><br>
           <div class="pergunta">
               <a>
-                  Se eu vir uma pessoa chorando, o que devo fazer?
+                  {{ $question }}
               </a>
-              <img src="/images/meninaChorando.png" height="500px">
+              <img src="{{ $image }}" height="500px">
               <div class="button-grp">
-                  <button id="btn1"><span id="choice0">Rir</span></button>
-                  <button id="btn2"><span id="choice1">Oferecer ajuda</span></button>
-                  <button id="btn3"><span id="choice2">Gritar</span></button>
-                  <button id="btn4"><span id="choice3">Sair Correndo</span></button>
+                @foreach ($alternatives as $alternative)
+                  <button id="btn1" value="{{ $alternative }}"><span id="choice0">{{ $alternative }}</span></button>
+                @endforeach
               </div>
           </div>
       </div>
-      
   </div>
 </body>
 @endsection
