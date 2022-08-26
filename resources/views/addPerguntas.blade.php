@@ -34,21 +34,21 @@
     <p type="Alternativa:"><input type="text" name="alt3" id="alt3"></p>
     <br>
     <label class="corretude">Correta<br>
-        <input type="checkbox" name="isCorrect" checked="checked" value="1">
+        <input type="checkbox" name="isCorrect3" checked="checked" value="1">
         <span class="checkmark"></span>
     </label>
         
     <p type="Alternativa:"><input type="text" name="alt4" id="alt4"></p>
     <br>
     <label class="corretude">Correta<br>
-        <input type="checkbox" name="isCorrect" checked="checked" value="1">
+        <input type="checkbox" name="isCorrect4" checked="checked" value="1">
         <span class="checkmark"></span>
     </label>
 
     <p type="Alternativa:"><input type="text" name="alt5" id="alt5"></p>
     <br>
     <label class="corretude">Correta<br>
-        <input type="checkbox" name="isCorrect" checked="checked" value="1">
+        <input type="checkbox" name="isCorrect5" checked="checked" value="1">
         <span class="checkmark"></span>
     </label>
     <br>
