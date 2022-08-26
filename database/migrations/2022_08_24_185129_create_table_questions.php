@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->text('question');
             $table->string('image', 100);
+            $table->text('explanation', 100);
             $table->string('category', 50);
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->rememberToken();
             $table->timestamps();
         });
     }
