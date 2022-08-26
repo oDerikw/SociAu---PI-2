@@ -72,7 +72,7 @@
           </div>
           <div class="col-md-4">
             <div class="img-box">
-              <a href="{{ route('red') }}">
+              <a href="{{ route('pink') }}">
                 <img src="images/blocoRosa.png" alt="">
               </a>
             </div>
