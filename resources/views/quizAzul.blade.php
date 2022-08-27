@@ -75,7 +75,7 @@
               <a>
                   {{ $question }}
               </a>
-              <img src="{{ $image }}" height="500px">
+              <img src="{{ url("storage/$image") }}" height="500px">
               <div class="button-grp">
                 @foreach ($alternatives as $alternative)
                   <button id="btn1" value="{{ $alternative }}"><span id="choice0">{{ $alternative }}</span></button>

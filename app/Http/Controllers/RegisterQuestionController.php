@@ -32,11 +32,13 @@ class RegisterQuestionController extends Controller
             'category' => $request->category,
             'question' => $request->question,
             'explanation' => $request->explanation,
-            'image' => $request->image,
+            //disks options are avaiable in filesystem.php
+            //$request->image->store('folder', 'disks')
+            'image' => $request->image->store('images', 'public'),
             'user_id' => auth()->user()->id,
         ]);
 
-        $question_id = DB::table('questions')->latest()->first(['id'])->id;
+        $question_id = Question::latest()->first(['id'])->id;
 
         Alternative::create([
             'alternative' => $request->alt1,

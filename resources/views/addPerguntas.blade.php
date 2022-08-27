@@ -7,7 +7,7 @@
     <button type="submit">Logout</button>
 </form>
 
-<form name="formAdd" id="formAdd" method="post" action="{{ route('questionRegister') }}">
+<form name="formAdd" id="formAdd" method="post" action="{{ route('questionRegister') }}" enctype="multipart/form-data" >
     @csrf
     <h2>CADASTRAR QUESTÃO</h2>
     <p type="Categoria"><input type="text" name="category" id="category" ></p>
@@ -16,7 +16,7 @@
 
     <p type="Explicação Errada"><input type="text" name="explanation" id="explanation" ></p>
 
-    <p type="Imagem"><input type="text" name="image" id="image" ></p>
+    <p type="Imagem"><input type="file" name="image" id="image"></p>
     <p type="Alternativa:"><input type="text" name="alt1" id="alt1"></p>
     <br>
     <label class="corretude">Correta<br>
