@@ -1,13 +1,3 @@
-$('nav a').click(function(e){
-  e.preventDefault();
-  var id = $(this).attr('href'),
-      targetOffset = $(id).offset().top;
-      console.log(targetOffset);
-  $('html, body').animate({
-    scrollTop: targetOffset
-  }, 500);
-});
-
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('popper.js')) :
     typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
