@@ -76,6 +76,7 @@
     height: 300px;
   }
   
+  
 }
 
 @media (max-width: 768px) {
@@ -103,6 +104,12 @@
     display: flex;
     flex-direction: column;
   }
+  .centroExplicacao img{
+    height: 250px;
+  }
+  .star{
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -125,6 +132,15 @@
   .step::before{
     top:calc(100% - 8.5px);
   }
+  .centroExplicacao img{
+    height: 200px;
+  }
+  .star{
+    font-size: 40px;
+  }
+  .starIcon{
+    padding-left: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -146,6 +162,13 @@
   .start_section .detail-box h1 {
     font-size: 2.5rem;
   }
+  .star{
+    font-size: 30px;
+  }
+  .starIcon{
+    padding-left: 10px;
+  }
+  
 }
 
 @media (max-width: 420px) {}
