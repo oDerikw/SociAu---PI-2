@@ -1,7 +1,68 @@
-@extends('layouts.layout')
+<!DOCTYPE html>
+<html>
 
-@section('content')
-  
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/icon.png"/>
+
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>SociAu</title>
+
+  <!-- Refs / styles -->
+  <link rel="stylesheet" type="text/css"/>
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- Header -->
+    <header class="header_section menu-urls">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+
+          <a class="navbar-brander">
+            <img src="images/logo.png" width="150px">
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <nav>
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#index">Início </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">Sobre </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#services">Serviços </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#help"> Ajuda </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contato</a>
+                </li>
+              </ul>
+            </nav>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
     <!-- Start -->
     <section class=" start_section position-relative">
@@ -107,7 +168,7 @@
             </div>
             <div class="name">
               <h6>
-                Quizz 1
+                Empatia
               </h6>
             </div>
           </div>
@@ -120,7 +181,7 @@
             </div>
             <div class="name">
               <h6>
-                Quizz 2
+                Dia a Dia
               </h6>
             </div>
           </div>
@@ -133,7 +194,7 @@
             </div>
             <div class="name">
               <h6>
-                Quizz 3
+                Sentimentos
               </h6>
             </div>
           </div>
@@ -146,7 +207,7 @@
             </div>
             <div class="name">
               <h6>
-                Quizz 4
+                Higiene
               </h6>
             </div>
           </div>
@@ -194,8 +255,8 @@
                 Rosemeire S. P.
               </h4>
               <p>
-                Rhoncus adipiscing dictumst quisque venenatis senectus congue vehicula sociosqu viverra et, 
-                netus ultricies nulla ullamcorper volutpat tempus elit proin aenean.
+                Rosemeire Silva Pereira é psicologa e possui uma clínica em guarapuava
+                especializada ao atendimento de crianças no aspecto TEA.
               </p>
             </div>
           </div>
@@ -217,8 +278,7 @@
                 Karina G.
               </h4>
               <p>
-                Fermentum morbi consectetur amet est aliquam habitasse varius suscipit id, 
-                bibendum velit libero placerat non tincidunt tristique nisi.
+                Demorou 3 meses pra responder e não quis ajudar muito.
               </p>
             </div>
           </div>
@@ -245,25 +305,25 @@
               <div class="contact_form-container">
                 <div>
                   <h2>
-                    Nome YYY
+                    Rosemeire S. P.
                   </h2>
                     <a>
                       <br>
-                      <img src="images/telephone.png" width="25px"> : 43 99123456789
-                      <br> <br>
-                      <img src="images/location.png" width="20px"> : R. Antonio Saturno, 150
+                      <img src="images/telephone.png" width="25px"> : 42 9947-6747 <br><br>
+                      <img src="images/envelope.png" width="25px"> : rose.meire.psi@gmail.com </img> <br> <br>
+                      <img src="images/location.png" width="20px"> : R. Pedro Alves, 593 - Batel, Guarapuava - PR
                     </a>
                     <br><br>
                 </div>
                 <div>
                   <h2>
-                    Nome ZZZ
+                    Karina G.
                   </h2>
                     <a>
                       <br>
-                      <img src="images/telephone.png" width="25px"> : 45 99123456789
-                      <br> <br>
-                      <img src="images/location.png" width="20px"> : R. Andrade Marquis, 320
+                      <img src="images/telephone.png" width="25px"> : 42 9912-3456 <br> <br>
+                      <img src="images/envelope.png" width="25px"> : abra,cadabra.psi@gmail.com </img> <br> <br>
+                      <img src="images/location.png" width="20px"> : R. Pedro Alves, 593 - Batel, Guarapuava - PR
                     </a>
                 </div>
               </div>
@@ -275,7 +335,7 @@
               <div id="map">
                 <div class="map-responsive">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.6203917386133!2d-51.4944483849867!3d-25.384035983809596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ef362a96428765%3A0x3508ff16b1db8aaa!2sUniversidade%20Estadual%20do%20Centro%20Oeste%20-%20Campus%20Cedeteg!5e0!3m2!1spt-BR!2sbr!4v1656186944806!5m2!1spt-BR!2sbr"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.532805491111!2d-51.473865484986725!3d-25.386969883808266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ef36353d7df5a1%3A0xb8d1503728607950!2sR.%20Pedro%20Alves%2C%20593%20-%20Batel%2C%20Guarapuava%20-%20PR%2C%2085015-360!5e0!3m2!1spt-BR!2sbr!4v1661816333401!5m2!1spt-BR!2sbr"
                     width="600" height="300" frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
                 </div>
               </div>
@@ -311,7 +371,7 @@
           </div>
         </a>
 
-        <a href="https://goo.gl/maps/gP5yH2E24nxQRqQH9">
+        <a href="https://goo.gl/maps/VZVTdpm5qtHuafWv6">
           <div class="item ">
             <div class="img-box box-1">
 
@@ -349,12 +409,27 @@
       </div>
       <div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          O sistema desenvolvido tem como o objetivo auxiliar pessoas com TEA no aprendizado de
+           habilidades sociais e superação desses déficits por meio de quizzes, onde serão 
+           representadas histórias sociais em formato de ilustração, perguntas e respostas.
         </p>
       </div>
     </div>
   </section>
-@endsection
+
+  <!-- Footer -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2022 Todos os direitos reservados para 
+      <a href="{{ route('index') }}">SociAu</a>
+    </p>
+  </section>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script>
+
+</body>
 
 </html>
