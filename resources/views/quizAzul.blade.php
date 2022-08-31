@@ -32,7 +32,7 @@
           <br><br>
           <div class="pergunta">
               <a>
-                  Se eu vir uma pessoa chorando, o que devo fazer?
+                  {{ $question }}
               </a>
               <img src="/images/img1.png" height="500px">
               <div class="button-grp" id="categoria1">
@@ -49,9 +49,14 @@
               <button id="btn4"><span id="choice3">Sair Correndo</span></button>
             </a>
           </div>
+              <img src="{{ url("storage/$image") }}" height="500px">
+              <div class="button-grp">
+                @foreach ($alternatives as $alternative)
+                  <button id="btn1" value="{{ $alternative }}"><span id="choice0">{{ $alternative }}</span></button>
+                @endforeach
+              </div>
           </div>
       </div>
-      
   </div>
 </body>
 @endsection
