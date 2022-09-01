@@ -29,11 +29,7 @@ class QuestionSeeder extends Seeder
             'question' => 'Pergunta da categoria cotidiano',
             'image' => 'images/X2HRr7ePVOv4ZNkkHsAKHNe1swHakGK2mxprsK5b.png',
             'explanation' => 'Incorreto',
-<<<<<<< HEAD
             'category' => 'cotidiano',
-=======
-            'category' => 'empatia',
->>>>>>> 3c3a4367aabc27750f0643c30376cc6275948533
             'user_id' => 1,
         ]);
 

@@ -21,21 +21,9 @@
   <div class="quiz_section_green">
     <div class="quiz">
             <div class="button-grp-diff">
-<<<<<<< HEAD:resources/views/dificuldades/diffVerde.blade.php
               <a href="{{ route('getCategoryDifficulty', ['category' => 'higiene', 'difficulty' => 'facil']) }}" id="btn1">Fácil</a>
               <a href="{{ route('getCategoryDifficulty', ['category' => 'higiene', 'difficulty' => 'medio']) }}" id="btn2">Médio</a>
               <a href="{{ route('getCategoryDifficulty', ['category' => 'higiene', 'difficulty' => 'dificil']) }}" id="btn3">Difícil</a>
-=======
-<<<<<<< HEAD
-              <a href="{{ route('getCategoryDifficulty', ['category' => 'higiene', 'difficulty' => 'facil']) }}" id="btn1">Fácil</a>
-              <a href="{{ route('getCategoryDifficulty', ['category' => 'higiene', 'difficulty' => 'medio']) }}" id="btn2">Médio</a>
-              <a href="{{ route('getCategoryDifficulty', ['category' => 'higiene', 'difficulty' => 'dificil']) }}" id="btn3">Difícil</a>
-=======
-              <a href="{{ route('quiz4') }}" id="btn13">Fácil</span></a>
-              <a href="{{ route('quiz4') }}" id="btn14">Médio</span></a>
-              <a href="{{ route('quiz4') }}" id="btn15">Difícil</span></a>
->>>>>>> d9541fa0589c9bbf81373a05088acdb5fcff854c
->>>>>>> 3c3a4367aabc27750f0643c30376cc6275948533:resources/views/diffVerde.blade.php
             </div>
             <div class="diff-gif">
               <img src="/images/a-verdinho.png" height="500px">
