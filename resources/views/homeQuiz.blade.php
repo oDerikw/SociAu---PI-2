@@ -1,5 +1,27 @@
-@extends('layouts.layout')
-@section('content')
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/icon.png"/>
+
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>SociAu</title>
+
+  <!-- Refs / styles -->
+  <link rel="stylesheet" type="text/css"/>
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
   <div class="hero_area">
     <!-- Header -->
     <header class="header_section menu-urls">
@@ -19,19 +41,19 @@
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="{{ route('index') }}">Início</a>
+                  <a class="nav-link" href="index.html">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/#about') }}">Sobre </a>
+                  <a class="nav-link" href="index.html">Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/#services') }}">Serviços </a>
+                  <a class="nav-link" href="index.html">Serviços </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/#help') }}"> Ajuda </a>
+                  <a class="nav-link" href="index.html"> Ajuda </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/#contact') }}">Contato</a>
+                  <a class="nav-link" href="index.html">Contato</a>
                 </li>
               </ul>
             </div>
@@ -86,9 +108,6 @@
           </div>
         </div>
       </div>
-      <div class="layout_logo">
-        <img class="bag_logo" src="images/logo.png" height="100px" alt="">
-      </div>
     </div>
   </section>
 
@@ -122,4 +141,19 @@
       </div>
     </div>
   </section>
-@endsection
+
+  <!-- Footer -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2022 All Rights Reserved By
+      <a href="{{ route('index') }}">>SociAu</a>
+    </p>
+  </section>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
