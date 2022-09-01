@@ -11,7 +11,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>@yield('title')</title>
+  <title>{{ $title }}</title>
 
   <!-- Refs / styles -->
   <link rel="stylesheet" type="text/css"/>

@@ -196,95 +196,6 @@ a:focus {
   background-size: 40px;
 }
 
-/* Slider */
-.slider_section {
-  .slider-container {
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-  }
-
-  .detail-box {
-    width: 45%;
-    z-index: 4;
-    color: $white;
-
-    h1 {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 3rem;
-    }
-
-    p {
-      width: 75%;
-      margin-top: 15px;
-    }
-
-    .slider-link {
-      display: inline-block;
-      padding: 10px 35px;
-      border: 1px solid $white;
-      background-color: transparent;
-      color: $white;
-      border-radius: 25px;
-
-      &:hover {
-        background-color: $white;
-        color: black;
-      }
-
-      margin-top: 35px;
-    }
-  }
-
-  .img-box {
-    width: 73%;
-    margin-left: -17%;
-    position: relative;
-    z-index: 2;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .slider_bg-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #a454fd, #2b05df);
-    z-index: 3;
-    clip-path: polygon(0 0, 60% 0, 37% 100%, 0% 100%);
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    left: 47.6%;
-    width: 50px;
-    height: 50px;
-    z-index: 9;
-    background-size: 9px;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 1;
-    border-radius: 100%;
-  }
-
-  .carousel-control-prev {
-    background-image: url(../images/prev.png);
-    background-color: $white;
-    top: 50%;
-    transform: translate(-50%, 0);
-  }
-
-  .carousel-control-next {
-    background-image: url(../images/next.png);
-    background-color: #2e02fe;
-    top: calc(50% - 30px);
-    transform: translate(0, -50%);
-  }
-}
-
 /* Sobre */
 .about_section {
   @include secondary-font();
@@ -400,7 +311,7 @@ a:focus {
 
 /* Ajuda */
 
-.portfolio_section {
+.home_section {
   @include secondary-font();
 
   .col-md-4 {
@@ -469,7 +380,7 @@ a:focus {
 
 
 /* Profissionais */
-.news_section {
+.pro_section {
 
   h2,
   p,

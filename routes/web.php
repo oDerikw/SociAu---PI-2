@@ -20,56 +20,53 @@ Route::get('/', function () {
 })->name('index');
 
 Route::get('/jogar', function () {
-    return view('homeQuiz');
+    return view('quiz/homeQuiz');
 })->name('jogar');
-
-/* Route::get('/jogar/dificuldade', function () {
-    return view('diffQuiz');
-})->name('diffQuiz'); */
-
-Route::get('/azul', function () {
-    return view('diffAzul');
-})->name('blue');
-
-Route::get('/amarelo', function () {
-    return view('diffAmarelo');
-})->name('yellow');
-
-Route::get('/rosa', function () {
-    return view('diffRosa');
-})->name('pink');
-
-Route::get('/verde', function () {
-    return view('diffVerde');
-})->name('green');
-
-Route::get('/quiz/azul', function () {
-    return view('quizAzul');
-})->name('quiz');
-
-Route::get('/quiz/amarelo', function () {
-    return view('quizAmarelo');
-})->name('quiz2');
-
-Route::get('/quiz/rosa', function () {
-    return view('quizRosa');
-})->name('quiz3');
-
-Route::get('/quiz/verde', function () {
-    return view('quizVerde');
-})->name('quiz4');
-
-Route::get('/explicacao', function () {
-    return view('explicacaoResposta');
-})->name('explicacao');
-
-Route::get('/pontuacao', function () {
-    return view('pontuacao');
-})->name('pontuacao');
 
 Route::get('/pais', function() {
     return view('parents');
 })->name('parents');
+
+
+Route::get('/empatia', function () {
+    return view('dificuldades/diffAzul');
+})->name('blue');
+
+Route::get('/cotidiano', function () {
+    return view('dificuldades/diffAmarelo');
+})->name('yellow');
+
+Route::get('/sentimentos', function () {
+    return view('dificuldades/diffRosa');
+})->name('pink');
+
+Route::get('/higiene', function () {
+    return view('dificuldades/diffVerde');
+})->name('green');
+
+Route::get('/quiz/empatia', function () {
+    return view('quiz/empatia');
+})->name('quizAzul');
+
+Route::get('/quiz/cotidiano', function () {
+    return view('quiz/cotidiano');
+})->name('quizAmarelo');
+
+Route::get('/quiz/sentimentos', function () {
+    return view('quiz/sentimentos');
+})->name('quizRosa');
+
+Route::get('/quiz/higiene', function () {
+    return view('quiz/higiene');
+})->name('quizVerde');
+
+Route::get('/explicacao', function () {
+    return view('quiz/explicacaoResposta');
+})->name('explicacao');
+
+Route::get('/pontuacao', function () {
+    return view('quiz/pontuacao');
+})->name('pontuacao');
 
 Route::get('/{category}/{difficulty}', [RetrieveQuestionController::class, 'retrieve'])->name('getCategoryDifficulty');
 

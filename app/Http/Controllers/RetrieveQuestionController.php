@@ -20,17 +20,17 @@ class RetrieveQuestionController extends Controller
                 $query_alt_incorrect = Alternative::where([
                     ['question_id', '=', $query_question[0]->id],
                     ['isCorrect', '=', 0]
-                ])->limit(1)->inRandomOrder()->get(['alternative', 'isCorrect']);
+                ])->limit(1)->inRandomOrder()->get(['id', 'alternative']);
 
                 // Seleciona uma alternativa correta aleatória com base no id da questão
                 $query_alt_correct = Alternative::where([
                     ['question_id', '=', $query_question[0]->id],
                     ['isCorrect', '=', 1]
-                ])->limit(1)->inRandomOrder()->get(['alternative', 'isCorrect']);
+                ])->limit(1)->inRandomOrder()->get(['id', 'alternative']);
 
                 $alternatives = [
-                    $query_alt_incorrect[0]->alternative,
-                    $query_alt_correct[0]->alternative,
+                    $query_alt_incorrect[0],
+                    $query_alt_correct[0],
                 ];
                 
                 // Embaralha as alternativas
@@ -45,25 +45,25 @@ class RetrieveQuestionController extends Controller
 
                 $query_question = $query_alt_incorrect = $query_alt_incorrect = NULL;
 
-                return view('quizAzul', $data);
+                return view('quiz/'.$category , $data);
             case 'medio':
                 // Seleciona alternativas incorretas aleatórias com base no id da questão
                 $query_alt_incorrect = Alternative::where([
                     ['question_id', '=', $query_question[0]->id],
                     ['isCorrect', '=', 0]
-                ])->limit(2)->inRandomOrder()->get(['alternative', 'isCorrect']);
+                ])->limit(2)->inRandomOrder()->get(['id', 'alternative']);
 
                 // Seleciona uma alternativa correta aleatória com base no id da questão
                 $query_alt_correct = Alternative::where([
                     ['question_id', '=', $query_question[0]->id],
                     ['isCorrect', '=', 1]
-                ])->limit(2)->inRandomOrder()->get(['alternative', 'isCorrect']);
+                ])->limit(2)->inRandomOrder()->get(['id', 'alternative']);
 
                 $alternatives = [
-                    $query_alt_incorrect[0]->alternative,
-                    $query_alt_incorrect[1]->alternative,
-                    $query_alt_correct[0]->alternative,
-                    $query_alt_correct[1]->alternative ?? 'Não existe',
+                    $query_alt_incorrect[0]->alternative => $query_alt_incorrect[0]->id,
+                    $query_alt_incorrect[1]->alternative => $query_alt_incorrect[1]->id,
+                    $query_alt_correct[0]->alternative => $query_alt_correct[0]->id,
+                    $query_alt_correct[1]->alternative => $query_alt_correct[1]->id,
                 ];
                 
                 // Embaralha as alternativas
@@ -78,25 +78,25 @@ class RetrieveQuestionController extends Controller
 
                 $query_question = $query_alt_incorrect = $query_alt_incorrect = NULL;
 
-                return view('quizAzul', $data);
+                return view('quiz/'.$category, $data);
             case 'dificil':
                 // Seleciona alternativas incorretas aleatórias com base no id da questão
                 $query_alt_incorrect = Alternative::where([
                     ['question_id', '=', $query_question[0]->id],
                     ['isCorrect', '=', 0]
-                ])->limit(3)->inRandomOrder()->get(['alternative', 'isCorrect']);
+                ])->limit(3)->inRandomOrder()->get(['id', 'alternative']);
 
                 // Seleciona uma alternativa correta aleatória com base no id da questão
                 $query_alt_correct = Alternative::where([
                     ['question_id', '=', $query_question[0]->id],
                     ['isCorrect', '=', 1]
-                ])->limit(1)->inRandomOrder()->get(['alternative', 'isCorrect']);
+                ])->limit(1)->inRandomOrder()->get(['id', 'alternative']);
 
                 $alternatives = [
-                    $query_alt_incorrect[0]->alternative,
-                    $query_alt_incorrect[1]->alternative,
-                    $query_alt_incorrect[2]->alternative,
-                    $query_alt_correct[0]->alternative,
+                    $query_alt_incorrect[0]->alternative => $query_alt_incorrect[0]->id ,
+                    $query_alt_incorrect[1]->alternative => $query_alt_incorrect[1]->id,
+                    $query_alt_incorrect[2]->alternative => $query_alt_incorrect[2]->id,
+                    $query_alt_correct[0]->alternative => $query_alt_incorrect[0]->id,
                 ];
                 
                 // Embaralha as alternativas
@@ -110,7 +110,7 @@ class RetrieveQuestionController extends Controller
                 ];
 
                 $query_question = $query_alt_incorrect = $query_alt_incorrect = NULL;
-                return view('quizAzul', $data);
+                return view('quiz/'.$category, $data);
         }
     }
 }

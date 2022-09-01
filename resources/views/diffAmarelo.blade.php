@@ -20,10 +20,17 @@
   <!-- Bottons -->
   <div class="quiz_section_yellow">
     <div class="quiz">
+<<<<<<< HEAD
+            <div class="button-grp-diff">
+              <a href="{{ route('getCategoryDifficulty', ['category' => 'cotidiano', 'difficulty' => 'facil']) }}" id="btn1">Fácil</a>
+              <a href="{{ route('getCategoryDifficulty', ['category' => 'cotidiano', 'difficulty' => 'medio']) }}" id="btn2">Médio</a>
+              <a href="{{ route('getCategoryDifficulty', ['category' => 'cotidiano', 'difficulty' => 'dificil']) }}" id="btn3">Difícil</a>
+=======
             <div class="button-grp-diff" id="categoria2">
               <a href="{{ route('quiz2') }}" id="btn5">Fácil</span></a>
               <a href="{{ route('quiz2') }}" id="btn6">Médio</span></a>
               <a href="{{ route('quiz2') }}" id="btn7">Difícil</span></a>
+>>>>>>> d9541fa0589c9bbf81373a05088acdb5fcff854c
             </div>
             <div class="diff-gif">
               <img src="/images/a-amarelinho.png" height="500px">
