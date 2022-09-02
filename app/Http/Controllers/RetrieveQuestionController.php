@@ -35,7 +35,7 @@ class RetrieveQuestionController extends Controller
                 
                 // Embaralha as alternativas
                 shuffle($alternatives);
-                
+
                 $data = [
                     'question' => $query_question[0]->question,
                     'explanation' => $query_question[0]->explanation,
@@ -60,10 +60,10 @@ class RetrieveQuestionController extends Controller
                 ])->limit(2)->inRandomOrder()->get(['id', 'alternative']);
 
                 $alternatives = [
-                    $query_alt_incorrect[0]->alternative => $query_alt_incorrect[0]->id,
-                    $query_alt_incorrect[1]->alternative => $query_alt_incorrect[1]->id,
-                    $query_alt_correct[0]->alternative => $query_alt_correct[0]->id,
-                    $query_alt_correct[1]->alternative => $query_alt_correct[1]->id,
+                    $query_alt_incorrect[0],
+                    $query_alt_incorrect[1],
+                    $query_alt_correct[0],
+                    $query_alt_correct[1],
                 ];
                 
                 // Embaralha as alternativas
@@ -93,10 +93,10 @@ class RetrieveQuestionController extends Controller
                 ])->limit(1)->inRandomOrder()->get(['id', 'alternative']);
 
                 $alternatives = [
-                    $query_alt_incorrect[0]->alternative => $query_alt_incorrect[0]->id ,
-                    $query_alt_incorrect[1]->alternative => $query_alt_incorrect[1]->id,
-                    $query_alt_incorrect[2]->alternative => $query_alt_incorrect[2]->id,
-                    $query_alt_correct[0]->alternative => $query_alt_incorrect[0]->id,
+                    $query_alt_incorrect[0],
+                    $query_alt_incorrect[1],
+                    $query_alt_incorrect[2],
+                    $query_alt_correct[0],
                 ];
                 
                 // Embaralha as alternativas
