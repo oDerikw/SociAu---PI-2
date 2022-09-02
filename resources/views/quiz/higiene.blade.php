@@ -33,7 +33,7 @@
          <a>
          {{ $question }}
          </a>
-         <img src="{{ $image }}" height="500px">
+         <img src="{{ "/storage/."$image }}" height="500px">
          <div class="button-grp">
             <form action="" method="post"></form>
             @csrf
