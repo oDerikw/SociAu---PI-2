@@ -8,8 +8,13 @@ use App\Models\Question;
 
 class RetrieveQuestionController extends Controller
 {
+    private $accepted_categories = ['empatia', 'cotidiano', 'sentimentos', 'higiene'];
+    private $accepted_difficulties = ['facil', 'medio', 'dififcil'];
+
     public function retrieve($category, $difficulty)
     {
+        if ($this->validateRequestArguments($category, $difficulty)) { return redirect('jogar'); }
+
         // Seleciona uma questão aleatória com base na categoria selecionada
         $query_question = Question::where('category', $category)->inRandomOrder()->get(['id', 'question', 'explanation', 'image']);
 
@@ -112,5 +117,14 @@ class RetrieveQuestionController extends Controller
                 $query_question = $query_alt_incorrect = $query_alt_incorrect = NULL;
                 return view('quiz/'.$category, $data);
         }
+    }
+
+    private function validateRequestArguments($category, $difficulty)
+    {
+        if (in_array($category, $this->accepted_categories, true) and in_array($difficulty, $this->accepted_difficulties, true))
+        {
+            return false;
+        }
+        return true;
     }
 }
