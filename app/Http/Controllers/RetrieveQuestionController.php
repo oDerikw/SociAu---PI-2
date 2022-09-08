@@ -11,14 +11,29 @@ class RetrieveQuestionController extends Controller
     private $accepted_categories = ['empatia', 'cotidiano', 'sentimentos', 'higiene'];
     private $accepted_difficulties = ['facil', 'medio', 'dificil'];
 
-    public function retrieve($category, $difficulty)
+    public function retrieve(Request $request, $category, $difficulty)
     {
         if (!$this->validateRequestArguments($category, $difficulty)) { return redirect('jogar'); }
+        
+        $session_setted = $request->session()->has('category') && 
+                          $request->session()->has('difficulty') && 
+                          $request->session()->has('incorrect_answers') && 
+                          $request->session()->has('correct_answers');
+                           
+        // Armazena os dados em uma sessão para garantir acesso aos controllers
+        if (!$session_setted)
+        {
+            session([
+                'category' => $category, 
+                'difficulty' => $difficulty,
+                'incorrect_answers' => 0,
+                'correct_answers' => 0,        
+            ]);
+        }
 
         // Seleciona uma questão aleatória com base na categoria selecionada
         $query_question = Question::where('category', $category)->inRandomOrder()->get(['id', 'question', 'explanation', 'image']);
         
-
         switch ($difficulty)
         {
             case 'facil':
@@ -56,7 +71,7 @@ class RetrieveQuestionController extends Controller
         }
         return false;
     }
-
+    
     private function queryAlternatives($question_id, $qt_incorrect, $qt_correct)
     {
         $alternatives = [];

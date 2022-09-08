@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\RegisterQuestionController;
 use App\Http\Controllers\RetrieveQuestionController;
+use App\Http\Controllers\VerifyAlternativeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,6 +69,7 @@ Route::get('/pontuacao', function () {
     return view('quiz/pontuacao');
 })->name('pontuacao');
 
+Route::get('/verifica/{id}', [VerifyAlternativeController::class, 'verify'])->name('verifyAlternative');
 Route::get('/{category}/{difficulty}', [RetrieveQuestionController::class, 'retrieve'])->name('getCategoryDifficulty');
 
 Route::middleware('auth')->group(function () {

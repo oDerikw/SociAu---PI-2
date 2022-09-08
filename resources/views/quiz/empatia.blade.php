@@ -33,12 +33,16 @@
          <a>
          {{ $question }}
          </a>
-         <img src="{{ "/storage/".$image }}" height="500px">
+         <img src="{{ '/storage/'.$image }}" height="500px">
          <div class="button-grp">
-            <form action="" method="post"></form>
-            @csrf
             @foreach ($alternatives as $alternative)
-                <span id="{{ $alternative->id }}"></span><button type="submit" id="btn1">{{ $alternative->alternative }}</button>
+                   <span id="{{ $alternative->id }}">
+                    <a href=" {{ route('verifyAlternative', ['id' => $alternative->id]) }}">
+                      <button type="submit" id="btn1">
+                        {{ $alternative->alternative }}
+                      </button>
+                    </a>
+                  </span>
             @endforeach
          </div>
       </div>
