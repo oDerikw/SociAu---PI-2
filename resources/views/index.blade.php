@@ -160,11 +160,11 @@
     </div>
     <div class="container">
       <div class="service_container layout_padding2">
-        <a href="">
+        <a href="{{ route('blue') }}">
           <div class="box">
             <div class="img-box">
-              <img src="images/s-5.png" alt="" class="img-1">
-              <img src="images/s5-blue.png" alt="" class="img-2">
+              <img src="images/carinhaAzul.png" alt="" class="img-1">
+              <img src="images/carinhaAzul2.png" alt="" class="img-2">
             </div>
             <div class="name">
               <h6>
@@ -173,11 +173,11 @@
             </div>
           </div>
         </a>
-        <a href="">
+        <a href="{{ route('yellow') }}">
           <div class="box">
             <div class="img-box">
-              <img src="images/s-4.png" alt="" class="img-1">
-              <img src="images/s4-blue.png" alt="" class="img-2">
+              <img src="images/carinhaAmarela.png" alt="" class="img-1">
+              <img src="images/carinhaAmarela2.png" alt="" class="img-2">
             </div>
             <div class="name">
               <h6>
@@ -186,11 +186,11 @@
             </div>
           </div>
         </a>
-        <a href="">
+        <a href="{{ route('pink') }}">
           <div class="box">
             <div class="img-box">
-              <img src="images/s-5.png" alt="" class="img-1">
-              <img src="images/s5-blue.png" alt="" class="img-2">
+              <img src="images/carinhaRosa.png" alt="" class="img-1">
+              <img src="images/carinhaRosa2.png" alt="" class="img-2">
             </div>
             <div class="name">
               <h6>
@@ -199,11 +199,11 @@
             </div>
           </div>
         </a>
-        <a href="">
+        <a href="{{ route('green') }}">
           <div class="box">
             <div class="img-box">
-              <img src="images/s-4.png" alt="" class="img-1">
-              <img src="images/s4-blue.png" alt="" class="img-2">
+              <img src="images/carinhaVerde.png" alt="" class="img-1">
+              <img src="images/carinhaVerde2.png" alt="" class="img-2">
             </div>
             <div class="name">
               <h6>
@@ -215,11 +215,7 @@
 
       </div>
     </div>
-    <div class="read-btn">
-      <a href="{{ route('jogar') }}">
-        Começar
-      </a>
-    </div>
+    
   </section>
 
   <!-- Especialistas -->
@@ -241,7 +237,7 @@
         <div class="col-md-4">
           <div class="box">
             <div class="img-box">
-              <img src="images/n-2.jpg" alt="">
+              <img src="images/rosemeire.jpeg" alt="">
             </div>
             <div class="action-box">
               <div class="action">
