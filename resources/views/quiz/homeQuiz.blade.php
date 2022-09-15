@@ -146,7 +146,7 @@
   <!-- Footer -->
   <section class="container-fluid footer_section">
     <p>
-      <a href="{{ route('index') }}">>SociAu</a>
+      <a href="{{ route('index') }}">SociAu</a>
     </p>
   </section>
 
