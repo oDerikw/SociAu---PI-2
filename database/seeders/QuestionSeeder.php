@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class AlternativesSeeder extends Seeder
+class QuestionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,636 +18,177 @@ class AlternativesSeeder extends Seeder
       /*
         Perguntas Empatia
       */
-        // Pergunta 1
-        DB::table('alternatives')->insert([ // Pergunta Empatia 1 errada-1
-            'alternative' => 'Rir',
-            'isCorrect' => 0,
-            'question_id' => 1,
+
+        DB::table('questions')->insert([ // Pergunta Empatia 1
+            'question' => 'Se uma pessoa cai no chão na sua frente você deve:',
+            'image' => 'images/Empatia1.png',
+            'explanation' => 'Você poderia oferecer ajuda ou pergutar se a pessoa está bem',
+            'category' => 'empatia',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Empatia 1 errada-2
-            'alternative' => 'Gritar',
-            'isCorrect' => 0,
-            'question_id' => 1,
+        DB::table('questions')->insert([ // Pergunta Empatia 2
+            'question' => 'Se uma pessoa te faz um elogio carinhoso como você deve responder?',
+            'image' => 'images/Empatia2.png',
+            'explanation' => 'Uma boa opção seria agradecer ou elogiar a pessoa também',
+            'category' => 'empatia',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Empatia 1 errada-3
-            'alternative' => 'Fingir que não viu',
-            'isCorrect' => 0,
-            'question_id' => 1,
+        DB::table('questions')->insert([ // Pergunta Empatia 3
+            'question' => 'Você ganhou um presente dos seus pais que não gostou, o que você diz?',
+            'image' => 'images/Empatia3.png',
+            'explanation' => 'Está tudo bem se não gostar do presente, mas é sempre bom agradecer',
+            'category' => 'empatia',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Empatia 1 correta-1
-            'alternative' => 'Oferecer ajuda',
-            'isCorrect' => 1,
-            'question_id' => 1,
+        DB::table('questions')->insert([ // Pergunta Empatia 4
+            'question' => 'É aniversário do seu amigo, o que você pode dizer?',
+            'image' => 'images/Empatia4.png',
+            'explanation' => 'Seu amigo ficaria muito feliz se você o desejasse feliz aniversário',
+            'category' => 'empatia',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Empatia 1 correta-2
-            'alternative' => 'Perguntar se está tudo bem',
-            'isCorrect' => 1,
-            'question_id' => 1,
-        ]);
-
-        // Pergunta 2
-        DB::table('alternatives')->insert([ // Pergunta Empatia 2 errada-1
-            'alternative' => 'Sair correndo',
-            'isCorrect' => 0,
-            'question_id' => 2,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 2 errada-2
-            'alternative' => 'Xingar a pessoa',
-            'isCorrect' => 0,
-            'question_id' => 2,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 2 errada-3
-            'alternative' => 'Mostrar a língua',
-            'isCorrect' => 0,
-            'question_id' => 2,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 2 correta-1
-            'alternative' => 'Dizer muito obrigado',
-            'isCorrect' => 1,
-            'question_id' => 2,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 2 correta-2
-            'alternative' => 'Elogiar a pessoa',
-            'isCorrect' => 1,
-            'question_id' => 2,
-        ]);
-
-        // Pergunta 3
-        DB::table('alternatives')->insert([ // Pergunta Empatia 3 errada-1
-            'alternative' => 'Fazer cara feia',
-            'isCorrect' => 0,
-            'question_id' => 3,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 3 errada-2
-            'alternative' => 'Não gostei',
-            'isCorrect' => 0,
-            'question_id' => 3,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 3 errada-3
-            'alternative' => 'Jogar o presente fora',
-            'isCorrect' => 0,
-            'question_id' => 3,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 3 correta-1
-            'alternative' => 'Obrigado! Vocês ficariam chateados se eu trocasse?',
-            'isCorrect' => 1,
-            'question_id' => 3,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 3 correta-2
-            'alternative' => 'Obrigado! Mas não gostei muito do modelo. Dá para trocar?',
-            'isCorrect' => 1,
-            'question_id' => 3,
-        ]);
-
-        // Pergunta 4
-        DB::table('alternatives')->insert([ // Pergunta Empatia 4 errada-1
-            'alternative' => 'Não dizer nada',
-            'isCorrect' => 0,
-            'question_id' => 4,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 4 errada-2
-            'alternative' => 'Ofender ele',
-            'isCorrect' => 0,
-            'question_id' => 4,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 4 errada-3
-            'alternative' => 'Dizer que outra coisa é mais importante',
-            'isCorrect' => 0,
-            'question_id' => 4,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 4 correta-1
-            'alternative' => 'Feliz aniversário!',
-            'isCorrect' => 1,
-            'question_id' => 4,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 4 correta-2
-            'alternative' => 'Parabéns!',
-            'isCorrect' => 1,
-            'question_id' => 4,
-        ]);
-
-        // Pergunta 5
-        DB::table('alternatives')->insert([ // Pergunta Empatia 5 errada-1
-            'alternative' => 'Apenas comer',
-            'isCorrect' => 0,
-            'question_id' => 5,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 5 errada-2
-            'alternative' => 'Se virar',
-            'isCorrect' => 0,
-            'question_id' => 5,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 5 errada-3
-            'alternative' => 'Negar dividir',
-            'isCorrect' => 0,
-            'question_id' => 5,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 5 correta-1
-            'alternative' => 'Dividir com ele',
-            'isCorrect' => 1,
-            'question_id' => 5,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Empatia 5 correta-2
-            'alternative' => 'Oferecer algo a ele',
-            'isCorrect' => 1,
-            'question_id' => 5,
+        DB::table('questions')->insert([ // Pergunta Empatia 5
+            'question' => 'Você está comendo ao lado de um amigo, o que você pode fazer?',
+            'image' => 'images/Empatia5.png',
+            'explanation' => 'Se o seu amigo tiver olhando voce comer, seria uma boa alternativa dividir com ele ou perguntar se ele quer um pedaço.',
+            'category' => 'empatia',
+            'user_id' => 1,
         ]);
 
         /*
-        Perguntas Cotidiano
+          Perguntas Cotidiano
         */
 
-       // Pergunta 1
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 1 errada-1
-            'alternative' => 'Não ajudar em nada',
-            'isCorrect' => 0,
-            'question_id' => 6,
+        DB::table('questions')->insert([ // Pergunta Cotidiano 1
+            'question' => 'Quando você precisa ajudar em tarefas domésticas, o que você deve fazer?',
+            'image' => 'images/DiaADia1.png',
+            'explanation' => 'É muito importante ajudar nas tarefas domésticas e você sempre pode pedir ajuda para algum adulto',
+            'category' => 'cotidiano',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 1 errada-2
-            'alternative' => 'Fingir que não escutou',
-            'isCorrect' => 0,
-            'question_id' => 6,
+        DB::table('questions')->insert([ // Pergunta Cotidiano 2
+            'question' => 'Se você está em um lugar com muitas pessoas e muito barulho e você começa a se sentir incomodado, o que você pode fazer?',
+            'image' => 'images/DiaADia2.png',
+            'explanation' => 'Estar com pessoas de confianças pode ajudar você a se sentir seguro e mais confortável',
+            'category' => 'cotidiano',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 1 errada-3
-            'alternative' => 'Gritar com quem te pediu ajuda',
-            'isCorrect' => 0,
-            'question_id' => 6,
+        DB::table('questions')->insert([ // Pergunta Cotidiano 3
+            'question' => 'Se você está com seus amigos e você quer jogar cartas mas eles querem jogar vídeo game, o que você pode fazer?',
+            'image' => 'images/DiaADia3.png',
+            'explanation' => 'É importante respeitar a opinião dos seus amigos, mas vocês podem conversar e chegar numa solução boa para todos',
+            'category' => 'cotidiano',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 1 correta-1
-            'alternative' => 'Fazer sua parte e quando se sentir cansado pedir ajuda',
-            'isCorrect' => 1,
-            'question_id' => 6,
+        DB::table('questions')->insert([ // Pergunta Cotidiano 4
+            'question' => 'Quando alguém te oferece algo que você não quer, como uma comida, um brinquedo, como você deve agir?',
+            'image' => 'images/DiaADia4.png',
+            'explanation' => 'Ser honesto é sempre a melhor opção, porem recuse gentilmente.',
+            'category' => 'cotidiano',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 1 correta-1
-            'alternative' => 'Conversar com seus pais sobre',
-            'isCorrect' => 1,
-            'question_id' => 6,
-        ]);
-
-        // Pergunta 2
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 2 errada-1
-            'alternative' => 'Gritar e quebrar as coisas',
-            'isCorrect' => 0,
-            'question_id' => 7,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 2 errada-2
-            'alternative' => 'Ser agressivo com outras pessoas',
-            'isCorrect' => 0,
-            'question_id' => 7,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 2 errada-3
-            'alternative' => 'Sair correndo sem avisar ninguém',
-            'isCorrect' => 0,
-            'question_id' => 7,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 2 correta-1
-            'alternative' => 'Pedir ajuda para alguém de confiança',
-            'isCorrect' => 1,
-            'question_id' => 7,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 2 correta-2
-            'alternative' => 'Ir para outro lugar junto ao seus pais',
-            'isCorrect' => 1,
-            'question_id' => 7,
-        ]);
-
-        // Pergunta 3
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 3 errada-1
-            'alternative' => 'Ficar bravo',
-            'isCorrect' => 0,
-            'question_id' => 8,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 3 errada-2
-            'alternative' => 'Sair correndo',
-            'isCorrect' => 0,
-            'question_id' => 8,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 3 errada-3
-            'alternative' => 'Xingar os amigos',
-            'isCorrect' => 0,
-            'question_id' => 8,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 3 correta-1
-            'alternative' => 'Conversar com eles para jogar cartas em outro momento',
-            'isCorrect' => 1,
-            'question_id' => 8,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 3 correta-2
-            'alternative' => 'Achar uma terceira opção que possa agradar a todos',
-            'isCorrect' => 1,
-            'question_id' => 8,
-        ]);
-
-        // Pergunta 4
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 4 errada-1
-            'alternative' => 'Inventar uma mentira',
-            'isCorrect' => 0,
-            'question_id' => 9,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 4 errada-2
-            'alternative' => 'Empurrar a pessoa',
-            'isCorrect' => 0,
-            'question_id' => 9,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 4 errada-3
-            'alternative' => 'Gritar com a pessoa',
-            'isCorrect' => 0,
-            'question_id' => 9,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 4 correta-1
-            'alternative' => 'Responder com calma: "Não Obrigado."',
-            'isCorrect' => 1,
-            'question_id' => 9,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 4 correta-2
-            'alternative' => 'Recusar amigávelmente',
-            'isCorrect' => 1,
-            'question_id' => 9,
-        ]);
-
-        // Pergunta 5
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 5 errada-1
-            'alternative' => 'Ignora o vendedor',
-            'isCorrect' => 0,
-            'question_id' => 10,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 5 errada-2
-            'alternative' => 'Se esconder do vendedor',
-            'isCorrect' => 0,
-            'question_id' => 10,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 5 errada-3
-            'alternative' => 'Sair correndo',
-            'isCorrect' => 0,
-            'question_id' => 10,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 5 correta-1
-            'alternative' => 'Dar bom dia e falar o que veio comprar',
-            'isCorrect' => 1,
-            'question_id' => 10,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Cotidiano 5 correta-2
-            'alternative' => 'Responder amigávelmente com oi e dizer o que procura',
-            'isCorrect' => 1,
-            'question_id' => 10,
+        DB::table('questions')->insert([ // Pergunta Cotidiano 5
+            'question' => 'O vendedor diz: "Bom dia, como posso ajudá-lo?" O que voce responde?',
+            'image' => 'images/DiaADia5.png',
+            'explanation' => 'Perguntar o que deseja ao vendedor torna a compra mais rápida, evitando estresse desnecessario',
+            'category' => 'cotidiano',
+            'user_id' => 1,
         ]);
 
         /*
-        Perguntas Sentimentos
+          Perguntas Sentimentos
         */
 
-       // Pergunta 1
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 1 errada-1
-            'alternative' => 'Ser rude com outra pessoa',
-            'isCorrect' => 0,
-            'question_id' => 11,
+        DB::table('questions')->insert([ // Pergunta Sentimentos 1
+            'question' => 'Quando você está com raiva, como você deve agir?',
+            'image' => 'images/Sentimentos1.png',
+            'explanation' => 'Quando a irritação ameaçar tomar conta, respire fundo para acalmar a mente e tome um copo de água',
+            'category' => 'sentimentos',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 1 errada-2
-            'alternative' => 'Gritar ',
-            'isCorrect' => 0,
-            'question_id' => 11,
+        DB::table('questions')->insert([ // Pergunta Sentimentos 2
+            'question' => 'Quando você está triste, o que você pode fazer?',
+            'image' => 'images/Sentimentos2.png',
+            'explanation' => 'A tristeza muitas vezes resulta em sentir-se solitário, por isso é importante conversar com alguém de confiaça e fazer uma atividade que goste.',
+            'category' => 'sentimentos',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 1 errada-3
-            'alternative' => 'Se machucar',
-            'isCorrect' => 0,
-            'question_id' => 11,
+        DB::table('questions')->insert([ // Pergunta Sentimentos 3
+            'question' => 'Quando você sente medo, o que você pode fazer?',
+            'image' => 'images/Sentimentos3.png',
+            'explanation' => 'O medo não é sinal de fraqueza.A escrita é uma ferramenta poderosa para organizar os seus pensamentos, emoções e medos',
+            'category' => 'sentimentos',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 1 correta-1
-            'alternative' => 'Tomar um copo de água para se acalmar',
-            'isCorrect' => 1,
-            'question_id' => 11,
+        DB::table('questions')->insert([ // Pergunta Sentimentos 4
+            'question' => 'Você se machuca e sente  dor, o que você faz?',
+            'image' => 'images/Sentimentos4.png',
+            'explanation' => 'Quando você se machuca é essencial que mostre para um adulto, porque ele vai saber o que fazer para te ajudar',
+            'category' => 'sentimentos',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 1 correta-2
-            'alternative' => ' Respire fundo e procure um local mais calmo',
-            'isCorrect' => 1,
-            'question_id' => 11,
-        ]);
-
-        // Pergunta 2
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 2 errada-1
-            'alternative' => 'Se trancar no quarto sozinho',
-            'isCorrect' => 0,
-            'question_id' => 12,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 2 errada-2
-            'alternative' => 'Sair sem avisar ninguém',
-            'isCorrect' => 0,
-            'question_id' => 12,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 2 errada-3
-            'alternative' => 'Se machucar',
-            'isCorrect' => 0,
-            'question_id' => 12,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 2 correta-1
-            'alternative' => 'Desabafar com outra pessoa',
-            'isCorrect' => 1,
-            'question_id' => 12,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 2 correta-2
-            'alternative' => 'Fazer uma atividade que gosta, como desenhar ou ver filmes',
-            'isCorrect' => 1,
-            'question_id' => 12,
-        ]);
-
-        // Pergunta 3
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 3 errada-1
-            'alternative' => 'Fazer xixi na cama',
-            'isCorrect' => 0,
-            'question_id' => 13,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 3 errada-2
-            'alternative' => 'Se esconder',
-            'isCorrect' => 0,
-            'question_id' => 13,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 3 errada-3
-            'alternative' => 'Pedir aos pais para não sair de casa, aos prantos',
-            'isCorrect' => 0,
-            'question_id' => 13,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 3 correta-1
-            'alternative' => 'Conversar com os pais ou professora',
-            'isCorrect' => 1,
-            'question_id' => 13,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 3 correta-2
-            'alternative' => 'Desenhe ou escreva o que está sentindo',
-            'isCorrect' => 1,
-            'question_id' => 13,
-        ]);
-
-        // Pergunta 4
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 4 errada-1
-            'alternative' => 'Ficar chorando',
-            'isCorrect' => 0,
-            'question_id' => 14,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 4 errada-2
-            'alternative' => 'Tomar um remédio sem a supervisão de um adulto',
-            'isCorrect' => 0,
-            'question_id' => 14,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 4 errada-3
-            'alternative' => 'Ficar mexendo no machucado',
-            'isCorrect' => 0,
-            'question_id' => 14,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 4 correta-1
-            'alternative' => 'Pedir ajuda para algum adullto',
-            'isCorrect' => 1,
-            'question_id' => 14,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 4 correta-2
-            'alternative' => 'Mostrar o ferimento para alguém',
-            'isCorrect' => 1,
-            'question_id' => 14,
-        ]);
-
-        // Pergunta 5
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 5 errada-1
-            'alternative' => 'Ficar desanimado',
-            'isCorrect' => 0,
-            'question_id' => 15,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 5 errada-2
-            'alternative' => 'Tampar o rosto com a mão',
-            'isCorrect' => 0,
-            'question_id' => 15,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 5 errada-3
-            'alternative' => 'Começa a imitar oque as pessoas falam',
-            'isCorrect' => 0,
-            'question_id' => 15,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 5 correta-1
-            'alternative' => 'Respire fundo, e volte a fazer oque estava fazendo',
-            'isCorrect' => 1,
-            'question_id' => 15,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Sentimentos 5 correta-2
-            'alternative' => 'Admita o que você está sentindo,para seus pais ou amigos',
-            'isCorrect' => 1,
-            'question_id' => 15,
+        DB::table('questions')->insert([ // Pergunta Sentimentos 5
+            'question' => 'Quando você se sente envergonhado, o que você pode fazer?',
+            'image' => 'images/Sentimentos5.png',
+            'explanation' => 'É natural ficar envergonhado de vez em quando, respirar fundo é sempre uma boa opção para se sentir mais calmo.',
+            'category' => 'sentimentos',
+            'user_id' => 1,
         ]);
 
         /*
-        Perguntas Higiene
+          Perguntas Higiene
         */
 
-        // Pergunta 1
-        DB::table('alternatives')->insert([ // Pergunta Higiene 1 errada-1
-            'alternative' => 'Falar agressivamente "banheiro, agora!"',
-            'isCorrect' => 0,
-            'question_id' => 16,
+        DB::table('questions')->insert([ // Pergunta Higiene 1
+            'question' => 'Você está na casa de um amigo e precisa ir ao banheiro. O que você pode fazer?',
+            'image' => 'images/Higiene1.png',
+            'explanation' => 'Tentar bloquear essa necessidade de ir ao banheiro pode piorar ainda mais o desconforto, então o ideal é pedir para usar o banheiro.',
+            'category' => 'higiene',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Higiene 1 errada-2
-            'alternative' => 'Ir ao banheiro sem dizer nada',
-            'isCorrect' => 0,
-            'question_id' => 16,
+        DB::table('questions')->insert([ // Pergunta Higiene 2
+            'question' => 'Ao ir ao banheiro, o que você precisa fazer?',
+            'image' => 'images/Higiene2.png',
+            'explanation' => 'Em geral, você deve sempre lavar as mãos e dar descarga: antes e depois de usar o banheiro porque esse hábito pode prevenir doenças',
+            'category' => 'higiene',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Higiene 1 errada-3
-            'alternative' => 'Não fazer nada e segurar até voltar para casa',
-            'isCorrect' => 0,
-            'question_id' => 16,
+        DB::table('questions')->insert([ // Higiene 3
+            'question' => 'Quando sua mãe pede para voce tomar banho. O que você faz? ',
+            'image' => 'images/Higiene3.png',
+            'explanation' => 'O ideal é tomar banho no momento que sua mãe diz, porque assim quando terminar pode voltar a fazer o que estava fazendo antes do banho,sem se preocupar.',
+            'category' => 'higiene',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Higiene 1 correta-1
-            'alternative' => 'Você poderia me dizer onde fica o banheiro?',
-            'isCorrect' => 1,
-            'question_id' => 16,
+        DB::table('questions')->insert([ // Pergunta Higiene 4
+            'question' => 'Quando tossir ou espirrar, o que você deve fazer?',
+            'image' => 'images/Higiene4.png',
+            'explanation' => 'Voce deve cobrir com as mão ou usar máscara, porque assim você protege as pessoas ao seu redor contra vírus como resfriado ou gripe.',
+            'category' => 'higiene',
+            'user_id' => 1,
         ]);
 
-        DB::table('alternatives')->insert([ // Pergunta Higiene 1 correta-2
-            'alternative' => 'Dizer "com liçenca, preciso usar o banheiro"',
-            'isCorrect' => 1,
-            'question_id' => 16,
-        ]);
-
-        // Pergunta 2
-        DB::table('alternatives')->insert([ // Pergunta Higiene 2 errada-1
-            'alternative' => 'Sujar o banheiro',
-            'isCorrect' => 0,
-            'question_id' => 17,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 2 errada-2
-            'alternative' => 'Se trancar no banheiro',
-            'isCorrect' => 0,
-            'question_id' => 17,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 2 errada-3
-            'alternative' => 'Deixar a torneira ligada',
-            'isCorrect' => 0,
-            'question_id' => 17,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 2 correta-1
-            'alternative' => 'Lavar a mão depois de usar o banheiro',
-            'isCorrect' => 1,
-            'question_id' => 17,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 2 correta-2
-            'alternative' => 'Dar descarga depois de usar o banheiro',
-            'isCorrect' => 1,
-            'question_id' => 17,
-        ]);
-
-        // Pergunta 3
-        DB::table('alternatives')->insert([ // Pergunta Higiene 3 errada-1
-            'alternative' => 'Faz birra',
-            'isCorrect' => 0,
-            'question_id' => 18,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 3 errada-2
-            'alternative' => 'Grita com a sua mãe',
-            'isCorrect' => 0,
-            'question_id' => 18,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 3 errada-3
-            'alternative' => 'Ignora sua mãe',
-            'isCorrect' => 0,
-            'question_id' => 18,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 3 correta-1
-            'alternative' => 'Responde que irá tomar o banho agora mesmo',
-            'isCorrect' => 1,
-            'question_id' => 18,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 3 correta-2
-            'alternative' => 'Assim que terminar o que está fazendo vai tomar banho',
-            'isCorrect' => 1,
-            'question_id' => 18,
-        ]);
-
-        // Pergunta 4
-        DB::table('alternatives')->insert([ // Pergunta Higiene 4 errada-1
-            'alternative' => 'Apenas ignorar',
-            'isCorrect' => 0,
-            'question_id' => 19,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 4 errada-2
-            'alternative' => 'Tossir em direção a uma pessoa',
-            'isCorrect' => 0,
-            'question_id' => 19,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 4 errada-3
-            'alternative' => 'Não fazer nada',
-            'isCorrect' => 0,
-            'question_id' => 19,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 4 correta-1
-            'alternative' => 'Colocar a mão sobre a boca',
-            'isCorrect' => 1,
-            'question_id' => 19,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 4 correta-2
-            'alternative' => 'Usar uma máscara',
-            'isCorrect' => 1,
-            'question_id' => 19,
-        ]);
-
-        // Pergunta 5
-        DB::table('alternatives')->insert([ // Pergunta Higiene 5 errada-1
-            'alternative' => 'Sair correndo',
-            'isCorrect' => 0,
-            'question_id' => 20,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 5 errada-2
-            'alternative' => 'Não fazer o que ela pediu',
-            'isCorrect' => 0,
-            'question_id' => 20,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 5 errada-3
-            'alternative' => 'Dizer que está bem assim',
-            'isCorrect' => 0,
-            'question_id' => 20,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 5 correta-1
-            'alternative' => 'Escovar os dentes',
-            'isCorrect' => 1,
-            'question_id' => 20,
-        ]);
-
-        DB::table('alternatives')->insert([ // Pergunta Higiene 5 correta-2
-            'alternative' => 'Usar palito de dente ou fio dental',
-            'isCorrect' => 1,
-            'question_id' => 20,
+        DB::table('questions')->insert([ // Pergunta Higiene 5
+            'question' => 'Se sua mãe pedir para você escovar os dentes após as refeições, o que você deve fazer?',
+            'image' => 'images/Higiene5.png',
+            'explanation' => 'Para garantir um sorriso bonito e saudável, é necessário escovar os dentes após cada refeição, e utilizar o fio dental.',
+            'category' => 'higiene',
+            'user_id' => 1,
         ]);
     }
 }
