@@ -360,6 +360,10 @@ a:focus {
   margin-top: 15px;
 }
 
+.service_section .box img {
+  box-shadow: 0 0 20px  rgba(50, 50, 50, 0.874);
+ }
+
 .service_section .box .name h6 {
   text-transform: uppercase;
   color: #000000;
@@ -381,7 +385,7 @@ a:focus {
   height: 55%;
   top: 0;
   left: 0;
-  background-image: url(../images/service-tg.png);
+  background-image: url(../images/fundoAzul.png);
   z-index: -1;
 }
 
@@ -623,7 +627,7 @@ a:focus {
 .info_section {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  background-color: #021056;
+  background-color: #42cefe;
   color: #ffffff;
 }
 
@@ -680,7 +684,8 @@ a:focus {
 }
 
 .diff-gif {
-  margin-left: 35%;
+  align-items: center;
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -720,46 +725,49 @@ a:focus {
 }
 .pergunta a{
   font-family: "Confortaa" cursive;
-  font-size: 30px;
+  font-size: 25px;
 }
 .pergunta{
   text-align: center;
 }
 .button-grp {
-	margin-top: 30px;
+	margin-top: 5px;
   text-align: center;
 }
 
-#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn9, #btn10, 
-#btn11, #btn12, #btn13, #btn14, #btn15, #btn16 {
+.button-grp button, .button-grp-diff a {
 	background: #ffffff;
-	width: 480px;
-	font-size: 30px;
+	width: 300px;
+  min-height: 60px;
+	font-size: 18px;
+  
   font-family: "Confortaa" cursive;
 	border: 2px solid #000000;
 	border-radius: 50px;
 	margin: 10px 40px 10px 7.6px;
-	padding: 10px 10px;
+	
 	color: rgb(0, 0, 0);
-}
-.button-grp a:hover{
-  text-decoration: none;
   
 }
-#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, 
-#btn6:hover, #btn7:hover, #btn8:hover, #btn9:hover, #btn10:hover, #btn11:hover, 
-#btn12:hover, #btn13:hover, #btn14:hover, #btn15:hover, #btn16:hover{
+
+.button-grp-diff a {
+	width: 255px;
+  font-size: 30px;
+}
+.button-grp a:hover, .button-grp-diff a:hover{
+  text-decoration: none;
+}
+.button-grp button:hover, .button-grp-diff a:hover{
 	cursor: pointer;
 	background: #42cefe;
   color:#fff;
   border: none;
 }
 
-#btn1:focus, #btn2:focus, #btn3:focus, #btn4:focus, #btn5:focus, #btn6:focus, 
-#btn7:focus, #btn8:focus, #btn9:focus, #btn10:focus, #btn11:focus, #btn12:focus,
-#btn13:focus, #btn14:focus, #btn15:focus, #btn16:focus {
+.button-grp button:focus, .button-grp-diff a:focus{
 	outline: 0;
 }
+
 
 /* Quiz Colors */
 
@@ -767,24 +775,20 @@ a:focus {
   border-top: 5px solid #ffd057;
 }
 
-#btn5:hover, #btn6:hover, #btn7:hover, #btn8:hover {
+#categoria2 button:hover, .button-grp-diff#categoria2 a:hover {
 	background: #ffd057;
 }
-
+#categoria3 button:hover,.button-grp-diff#categoria3 a:hover {
+	background: #ff7358;
+}
+#categoria4 button:hover, .button-grp-diff#categoria4 a:hover{
+  background: #49e8a0;
+}
 .quiz_section_red {
   border-top: 5px solid #ff7358;
 }
-
-#btn9:hover, #btn10:hover, #btn11:hover, #btn12:hover {
-	background: #ff7358;
-}
-
 .quiz_section_green {
   border-top: 5px solid #49e8a0;
-}
-
-#btn13:hover, #btn14:hover, #btn15:hover, #btn16:hover {
-	background: #49e8a0;
 }
 
 /* Form Adms */
@@ -932,7 +936,7 @@ background-image: linear-gradient(to top, #FFBE71, rgb(245, 217, 180) 33%);
 .meio{
   display: flex;
   padding-left: 30px;
-  padding-top: 90px
+  padding-top: 10px
 }
 .meio img{
   height: 500px;
@@ -1199,8 +1203,6 @@ background-image: linear-gradient(to top, #FFBE71, rgb(245, 217, 180) 33%);
   flex-direction:row;
   font-size: 80px;
 }
-
-
 
 .starIcon{
   color:#616161;
