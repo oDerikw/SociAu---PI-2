@@ -13,7 +13,11 @@ class RetrieveQuestionController extends Controller
 
     public function retrieve(Request $request, $category, $difficulty)
     {
-        if (!$this->validateRequestArguments($category, $difficulty)) { return redirect('jogar'); }
+        if (!$this->validateRequestArguments($category, $difficulty)) 
+        {
+            $request->session()->forget('category', 'difficulty', 'incorrect_answers', 'correct_answers');
+            return redirect('jogar');
+        }
         
         $session_setted = $request->session()->has('category') && 
                           $request->session()->has('difficulty') && 

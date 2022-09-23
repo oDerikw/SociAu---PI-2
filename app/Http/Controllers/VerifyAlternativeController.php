@@ -15,17 +15,16 @@ class VerifyAlternativeController extends Controller
         $query_alternative = Alternative::where('id', $alternative_id)->get(['isCorrect', 'question_id']);
         
         if ($query_alternative[0]->isCorrect) {
-            $request->session()->increment('correct_answers');
+            $request->session()->increment('correct_answers', $incrementBy = 1);
         }
         else {
             $query_question = Question::where('id', $query_alternative[0]->question_id)->get(['explanation']);
-            $request->session()->increment('incorrect_answers');
-            //return $query_question[0]->explanation;
+            $request->session()->increment('incorrect_answers', $incrementBy = 1);
         }
 
-        if (($request->session()->get('incorrect_answers') + $request->session()->get('correct_answers')) >= $this->_MAX_QUESTIONS_PER_PLAY) {
+        if (($request->session()->get('incorrect_answers') + $request->session()->get('correct_answers')) >= 5) {
             $request->session()->forget('category', 'difficulty', 'incorrect_answers', 'correct_answers');
-            return redirect()->route('jogar');
+            return redirect()->route('pontuacao');
         } else {
             
             return redirect()->route('getCategoryDifficulty', [
@@ -33,5 +32,6 @@ class VerifyAlternativeController extends Controller
                 'difficulty' => $request->session()->get('difficulty'),
             ]);
         }
+        return view('quiz/explicacaoResposta', $query_question[0]);
     }
 }

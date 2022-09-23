@@ -92,7 +92,7 @@ class QuestionSeeder extends Seeder
             // Cotidiano 5
             'question' => 'O vendedor diz: "Bom dia, como posso ajudá-lo?" O que voce responde?',
             'image' => 'images/X2HRr7ePVOv4ZNkkHsAKHNe1swHakGK2mxprsK5b.png',
-            'explanation' => 'Perguntar o que deseja ao vendedor torna a compra mais rápida, evitando estresse desnecessario',
+            'explanation' => 'Perguntar o que deseja ao vendedor torna a compra mais rápida, evitando estresse desnecessário',
             'category' => 'cotidiano',
             'user_id' => 1,
         ]);
