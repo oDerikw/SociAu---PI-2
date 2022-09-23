@@ -293,7 +293,7 @@ class AlternativesSeeder extends Seeder
             'question_id' => 9,
         ]);
 
-        Cotidiano 5
+        // Cotidiano 5
         DB::table('alternatives')->insert([
             'alternative' => 'Ignora o vendedor',
             'isCorrect' => 0,

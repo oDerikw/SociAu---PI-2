@@ -101,7 +101,7 @@ class QuestionSeeder extends Seeder
             // Sentimentos
             'question' => 'Quando você está com raiva, como você deve agir?',
             'image' => 'images/X2HRr7ePVOv4ZNkkHsAKHNe1swHakGK2mxprsK5b.png',
-            'explanation' => 'Quando a irritação ameaçar tomar conta, respire fundo para acalmar a mente e tome um copo d'água ',
+            'explanation' => 'Quando a irritação ameaçar tomar conta, respire fundo para acalmar a mente e tome um copo d\'água ',
             'category' => 'sentimentos',
             'user_id' => 1,
         ]);
