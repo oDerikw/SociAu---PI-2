@@ -12,26 +12,26 @@ class VerifyAlternativeController extends Controller
     
     public function verify(Request $request, $alternative_id)
     {
-        $query_alternative = Alternative::where('id', $alternative_id)->get(['isCorrect', 'question_id']);
-        
-        if ($query_alternative[0]->isCorrect) {
-            $request->session()->increment('correct_answers', $incrementBy = 1);
-        }
-        else {
+        if ($request->session()->get('status') == 'started')
+        {
+            $query_alternative = Alternative::where('id', $alternative_id)->get(['isCorrect', 'question_id']);
             $query_question = Question::where('id', $query_alternative[0]->question_id)->get(['explanation']);
-            $request->session()->increment('incorrect_answers', $incrementBy = 1);
-        }
+        
+            if ($query_alternative[0]->isCorrect)
+                $request->session()->increment('correct_answers');
+            else
+                $request->session()->increment('incorrect_answers');
+                
+            if (($request->session()->get('incorrect_answers') + $request->session()->get('correct_answers')) >= $this->_MAX_QUESTIONS_PER_PLAY)
+                return redirect()->route('pontuacao');
 
-        if (($request->session()->get('incorrect_answers') + $request->session()->get('correct_answers')) >= 5) {
-            $request->session()->forget('category', 'difficulty', 'incorrect_answers', 'correct_answers');
-            return redirect()->route('pontuacao');
-        } else {
-            
-            return redirect()->route('getCategoryDifficulty', [
-                'category' => $request->session()->get('category'),
-                'difficulty' => $request->session()->get('difficulty'),
-            ]);
+            if (!$query_alternative[0]->isCorrect)
+            {
+                $request->session()->forget('explanation');
+                $request->session()->put('explanation', $query_question[0]->explanation);
+                return redirect()->route('explanation');
+            }
+            return redirect()->route('retrieveQuestion');
         }
-        return view('quiz/explicacaoResposta', $query_question[0]);
     }
 }
