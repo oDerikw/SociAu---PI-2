@@ -32,8 +32,8 @@
       <div class="pergunta">
          <a>
          {{ $question }}
-         </a>
-         <img src="{{ '/storage/'.$image }}" height="500px">
+         </a><br>
+         <img src="{{ $image }}" height="500px">
          <div class="button-grp">
             @foreach ($alternatives as $alternative)
                    <span id="{{ $alternative->id }}">
