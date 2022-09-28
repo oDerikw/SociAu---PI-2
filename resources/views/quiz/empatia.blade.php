@@ -9,27 +9,22 @@
             </a>
          </div>
          <div class="barra">
-            <!--Step active ja foi visitado -->
+            @for ($i = 0; $i < (Session::get('correct_answers') + Session::get('incorrect_answers')); $i++)
             <div class= "step active">
                <div class= "--number"></div>
             </div>
-            <div class= "step active">
-               <div class= "--number"></div>
-            </div>
-            <div class= "step active">
-               <div class= "--number"></div>
-            </div>
-            <!--Step não foi visitado -->
+            @endfor
+            @for ($i = 0; $i < 5 - (Session::get('correct_answers') + Session::get('incorrect_answers')); $i++)
             <div class= "step">
                <div class= "--number"></div>
             </div>
-            <div class= "step">
-               <div class= "--number"></div>
-            </div>
+            @endfor 
          </div>
       </div>
       <br><br>
+
       <div class="pergunta">
+      <h3>{{ Session::get('incorrect_answers') +  Session::get('correct_answers') +1}} / 5</h1>
          <a>
          {{ $question }}
          </a><br>
