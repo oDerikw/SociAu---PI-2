@@ -24,7 +24,6 @@
       <br><br>
 
       <div class="pergunta">
-      <h3>{{ Session::get('incorrect_answers') +  Session::get('correct_answers') +1}} / 5</h1>
          <a>
          {{ $question }}
          </a><br>
