@@ -227,7 +227,6 @@
             Especialistas
           </h2>
           <hr>
-
         </div>
         <p>
           Alguns dos profissionais que supervisionaram e ajudaram no projeto:
@@ -239,42 +238,13 @@
             <div class="img-box">
               <img src="images/rosemeire.jpeg" alt="">
             </div>
-            <div class="action-box">
-              <div class="action">
-                <a href="">
-                  <img src="images/share.png" alt="">
-                </a>
-              </div>
-            </div>
             <div class="detail-box">
               <h4>
                 Rosemeire S. P.
               </h4>
               <p>
-                Rosemeire Silva Pereira é psicologa e possui uma clínica em guarapuava
-                especializada ao atendimento de crianças no aspecto TEA.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/n-3.png" alt="">
-            </div>
-            <div class="action-box">
-              <div class="action">
-                <a href="">
-                  <img src="images/share.png" alt="">
-                </a>
-              </div>
-            </div>
-            <div class="detail-box">
-              <h4>
-                Karina G.
-              </h4>
-              <p>
-                Demorou 3 meses pra responder e não quis ajudar muito.
+                 Psicóloga, formada desde 2008, atuando em atraso do neurodesenvolvimento e TEA (Transtorno do Espectro Autista).
+                Especialista em ABA (Análise aplicada do Comportamento), Neuropsicologia e TCC (Terapia Cognitiva Comportamental).
               </p>
             </div>
           </div>
@@ -309,18 +279,7 @@
                       <img src="images/envelope.png" width="25px"> : rose.meire.psi@gmail.com </img> <br> <br>
                       <img src="images/location.png" width="20px"> : R. Pedro Alves, 593 - Batel, Guarapuava - PR
                     </a>
-                    <br><br>
-                </div>
-                <div>
-                  <h2>
-                    Karina G.
-                  </h2>
-                    <a>
-                      <br>
-                      <img src="images/telephone.png" width="25px"> : 42 9912-3456 <br> <br>
-                      <img src="images/envelope.png" width="25px"> : abra,cadabra.psi@gmail.com </img> <br> <br>
-                      <img src="images/location.png" width="20px"> : R. Pedro Alves, 593 - Batel, Guarapuava - PR
-                    </a>
+                    <br>
                 </div>
               </div>
 
@@ -416,7 +375,6 @@
   <!-- Footer -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2022 Todos os direitos reservados para 
       <a href="{{ route('index') }}">SociAu</a>
     </p>
   </section>

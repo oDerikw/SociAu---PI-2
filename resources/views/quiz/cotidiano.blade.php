@@ -26,6 +26,7 @@
          <a>
          {{ $question }}
          </a><br>
+         </a>
          <img src="{{ $image }}" height="500px">
          <div class="button-grp">
             @foreach ($alternatives as $alternative)
