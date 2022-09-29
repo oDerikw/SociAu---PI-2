@@ -75,7 +75,7 @@
 
         <div class="btn-wrap">
           <img class="homep" width="100%" src="images/Home.png">
-          <a href="{{ route('jogar') }}">
+          <a href="{{ route('choose_category') }}">
           <button class="homeb"><img class="homebb" src="images/play.png" height="">PLAY</button></a>
         </div>
         

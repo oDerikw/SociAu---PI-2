@@ -21,9 +21,9 @@
   <div class="quiz_section_green">
     <div class="quiz">
             <div class="button-grp-diff" id="categoria4">
-              <a href="{{ route('getCategoryDifficulty', ['category' => 'higiene', 'difficulty' => 'facil']) }}" id="btn1">Fácil</a>
-              <a href="{{ route('getCategoryDifficulty', ['category' => 'higiene', 'difficulty' => 'medio']) }}" id="btn2">Médio</a>
-              <a href="{{ route('getCategoryDifficulty', ['category' => 'higiene', 'difficulty' => 'dificil']) }}" id="btn3">Difícil</a>
+              <a href="{{ route('play', ['category' => 'higiene', 'difficulty' => 'facil']) }}" id="btn1">Fácil</a>
+              <a href="{{ route('play', ['category' => 'higiene', 'difficulty' => 'medio']) }}" id="btn2">Médio</a>
+              <a href="{{ route('play', ['category' => 'higiene', 'difficulty' => 'dificil']) }}" id="btn3">Difícil</a>
             </div>
             <div class="diff-gif">
               <img src="/images/a-verdinho.png" height="500px">

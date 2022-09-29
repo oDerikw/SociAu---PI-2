@@ -5,33 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Alternative;
 use Illuminate\Http\Request;
 use App\Models\Question;
+use Illuminate\Support\Facades\Session;
 
 class RetrieveQuestionController extends Controller
 {
-    private $accepted_categories = ['empatia', 'cotidiano', 'sentimentos', 'higiene'];
-    private $accepted_difficulties = ['facil', 'medio', 'dificil'];
-
-    public function retrieve(Request $request, $category, $difficulty)
-    {
-        if (!$this->validateRequestArguments($category, $difficulty)) { return redirect('jogar'); }
-        
-        $session_setted = $request->session()->has('category') && 
-                          $request->session()->has('difficulty') && 
-                          $request->session()->has('incorrect_answers') && 
-                          $request->session()->has('correct_answers');
-                           
-        // Armazena os dados em uma sessão para garantir acesso aos controllers
-        if (!$session_setted)
-        {
-            session([
-                'category' => $category, 
-                'difficulty' => $difficulty,
-                'incorrect_answers' => 0,
-                'correct_answers' => 0,        
-            ]);
-        }
-
+    public function retrieve()
+    {   
         // Seleciona uma questão aleatória com base na categoria selecionada
+        $category = Session::get('category');
+        $difficulty = Session::get('difficulty');
         $query_question = Question::where('category', $category)->inRandomOrder()->get(['id', 'question', 'explanation', 'image']);
         
         switch ($difficulty)
@@ -61,15 +43,6 @@ class RetrieveQuestionController extends Controller
         $query_question = NULL;
 
         return view('quiz/'.$category, $data);
-    }
-
-    private function validateRequestArguments($category, $difficulty)
-    {
-        if (in_array($category, $this->accepted_categories, true) and in_array($difficulty, $this->accepted_difficulties, true))
-        {
-            return true;
-        }
-        return false;
     }
     
     private function queryAlternatives($question_id, $qt_incorrect, $qt_correct)

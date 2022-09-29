@@ -720,6 +720,8 @@ a:focus {
   background: #42cefe;
   text-align: center;
   text-decoration: white;
+  color: white;
+  font-weight: 700; 
   
 }
 .quiz_categoria a{

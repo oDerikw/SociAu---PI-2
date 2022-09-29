@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PlayController;
 use App\Http\Controllers\RegisterQuestionController;
 use App\Http\Controllers\RetrieveQuestionController;
 use App\Http\Controllers\VerifyAlternativeController;
@@ -20,9 +21,9 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/jogar', function () {
+Route::get('/categoria', function () {
     return view('quiz/homeQuiz');
-})->name('jogar');
+})->name('choose_category');
 
 Route::get('/pais', function() {
     return view('parents');
@@ -63,14 +64,16 @@ Route::get('/quiz/higiene', function () {
 
 Route::get('/explicacao', function () {
     return view('quiz/explicacaoResposta');
-})->name('explicacao');
+})->name('explanation');
 
 Route::get('/pontuacao', function () {
     return view('quiz/pontuacao');
 })->name('pontuacao');
 
+Route::get('/jogar', [PlayController::class, 'startNewGame'])->name('play');
+Route::get('/quiz', [RetrieveQuestionController::class, 'retrieve'])->name('retrieveQuestion');
 Route::get('/verifica/{id}', [VerifyAlternativeController::class, 'verify'])->name('verifyAlternative');
-Route::get('/{category}/{difficulty}', [RetrieveQuestionController::class, 'retrieve'])->name('getCategoryDifficulty');
+Route::get('/finaliza', [PlayController::class, 'endGame'])->name('endGame');
 
 Route::middleware('auth')->group(function () {
     Route::get('/cadastro-perguntas', [RegisterQuestionController::class, 'create'])->name('questionRegister');

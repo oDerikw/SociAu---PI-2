@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout', ['title' => 'SociAU'])
 @section('content')
 
    
@@ -10,18 +10,19 @@
           
           <div class="star">
             <!--Step active ja foi visitado -->
-            <span class="starIcon active">★</span>
-            <span class="starIcon active">★</span>
-            <span class="starIcon active">★</span>
-            <span class="starIcon">★</span>
-            <span class="starIcon">★</span>
+            @for ($i = 0; $i < Session::get('correct_answers'); $i++)
+              <span class="starIcon active">★</span>
+            @endfor
+            @for ($i = 0; $i < 5 - Session::get('correct_answers'); $i++)
+              <span class="starIcon">★</span>
+            @endfor         
               
           </div>
           <div class="finalText"> 
             <h1>Parabéns</h1>
-            <h4>Voce acertou 3/5</h4><br>
-            <a href="{{ route('jogar') }}"><img src="images/backPage.png" width="50px"></a>
-            <a href="{{ route('index') }}"><img src="images/homeIcon.png" width="50px"></a>
+            <h4>Voce acertou {{ Session::get('correct_answers') }}/5</h4><br>
+            <a href="{{ route('endGame') }}"><img src="images/backPage.png" width="50px"></a>
+            <a href="{{ route('endGame') }}"><img src="images/homeIcon.png" width="50px"></a>
           </div>
         </div>
       </div>

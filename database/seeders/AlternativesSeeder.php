@@ -26,6 +26,7 @@ class AlternativesSeeder extends Seeder
         ]);
 
         DB::table('alternatives')->insert([ // Pergunta Empatia 1 errada-2
+
             'alternative' => 'Gritar',
             'isCorrect' => 0,
             'question_id' => 1,
@@ -98,6 +99,7 @@ class AlternativesSeeder extends Seeder
             'isCorrect' => 0,
             'question_id' => 3,
         ]);
+
 
         DB::table('alternatives')->insert([ // Pergunta Empatia 3 correta-1
             'alternative' => 'Obrigado! Vocês ficariam chateados se eu trocasse?',
@@ -300,7 +302,7 @@ class AlternativesSeeder extends Seeder
             'isCorrect' => 1,
             'question_id' => 9,
         ]);
-
+        
         // Pergunta 5
         DB::table('alternatives')->insert([ // Pergunta Cotidiano 5 errada-1
             'alternative' => 'Ignora o vendedor',
@@ -404,7 +406,7 @@ class AlternativesSeeder extends Seeder
             'isCorrect' => 0,
             'question_id' => 13,
         ]);
-
+        
         DB::table('alternatives')->insert([ // Pergunta Sentimentos 3 errada-2
             'alternative' => 'Se esconder',
             'isCorrect' => 0,
@@ -478,7 +480,7 @@ class AlternativesSeeder extends Seeder
             'isCorrect' => 0,
             'question_id' => 15,
         ]);
-
+        
         DB::table('alternatives')->insert([ // Pergunta Sentimentos 5 correta-1
             'alternative' => 'Respire fundo, e volte a fazer oque estava fazendo',
             'isCorrect' => 1,
@@ -544,7 +546,7 @@ class AlternativesSeeder extends Seeder
             'isCorrect' => 0,
             'question_id' => 17,
         ]);
-
+        
         DB::table('alternatives')->insert([ // Pergunta Higiene 2 correta-1
             'alternative' => 'Lavar a mão depois de usar o banheiro',
             'isCorrect' => 1,
@@ -640,6 +642,7 @@ class AlternativesSeeder extends Seeder
 
         DB::table('alternatives')->insert([ // Pergunta Higiene 5 correta-1
             'alternative' => 'Escovar os dentes',
+
             'isCorrect' => 1,
             'question_id' => 20,
         ]);

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('alternatives', function (Blueprint $table) {
             $table->id();
-            $table->string('alternative',50);
+            $table->text('alternative');
             $table->boolean('isCorrect');
             $table->foreignId('question_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
