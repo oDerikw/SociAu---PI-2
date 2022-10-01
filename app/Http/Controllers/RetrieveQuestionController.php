@@ -14,35 +14,37 @@ class RetrieveQuestionController extends Controller
         // Seleciona uma questão aleatória com base na categoria selecionada
         $category = Session::get('category');
         $difficulty = Session::get('difficulty');
-        $query_question = Question::where('category', $category)->inRandomOrder()->get(['id', 'question', 'explanation', 'image']);
-        
-        switch ($difficulty)
+        $query_question = Question::where('category', $category)->limit(5)->get(['id', 'question', 'explanation', 'image']);
+
+        if (!Session::exists('retrieved'))
         {
-            case 'facil':
-                $alternatives = $this->queryAlternatives($query_question[0]->id, 1, 1);
-                break;
-                
-            case 'medio':
-                $alternatives = $this->queryAlternatives($query_question[0]->id, 2, 2);
-                break;
-                
-            case 'dificil':
-                $alternatives = $this->queryAlternatives($query_question[0]->id, 3, 1);
-                break;
+            Session::put('retrieved', true);
+
+            foreach($query_question as $question)
+                Session::push('questions', $question);
+
+            switch ($difficulty)
+            {
+                case 'facil':
+                    foreach ($query_question as $question)
+                        Session::push('alternatives', $this->queryAlternatives($question->id, 1, 1));
+                    break;
+                    
+                case 'medio':
+                    foreach ($query_question as $question)
+                        Session::push('alternatives', $this->queryAlternatives($question->id, 2, 2));
+                    break;
+                    
+                case 'dificil':
+                    foreach ($query_question as $question)
+                        Session::push('alternatives', $this->queryAlternatives($question->id, 3, 1));
+                    break;
+            }
+
+            $query_question = NULL;
+
         }
-
-        // Embaralha as alternativas
-        shuffle($alternatives);
-                
-        $data = [
-            'question' => $query_question[0]->question,
-            'explanation' => $query_question[0]->explanation,
-            'image' => $query_question[0]->image,
-            'alternatives' => $alternatives,
-        ];
-        $query_question = NULL;
-
-        return view('quiz/'.$category, $data);
+        return view('quiz/'.$category);
     }
     
     private function queryAlternatives($question_id, $qt_incorrect, $qt_correct)

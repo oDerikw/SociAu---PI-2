@@ -21,7 +21,6 @@ class PlayController extends Controller
                 'status' => 'started',
                 'category' => $category,
                 'difficulty' => $difficulty,
-                'explanation' => '',
                 'correct_answers' => 0,
                 'incorrect_answers' =>  0,
             ]);

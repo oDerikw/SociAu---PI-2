@@ -62,8 +62,8 @@ Route::get('/quiz/higiene', function () {
     return view('quiz/higiene');
 })->name('quizVerde');
 
-Route::get('/explicacao', function () {
-    return view('quiz/explicacaoResposta');
+Route::get('/explicacao/{text?}', function ($text = 'Parabéns!') {
+    return view('quiz/explicacaoResposta', compact('text'));
 })->name('explanation');
 
 Route::get('/pontuacao', function () {
