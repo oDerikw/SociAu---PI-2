@@ -12,6 +12,8 @@ class VerifyAlternativeController extends Controller
     
     public function verify(Request $request, $alternative_id)
     {
+        $texts = ['Parabéns!', 'Muito bem!', 'Ótima resposta!', 'Você está correto, parabéns!', 'Você acertou!'];
+
         if ($request->session()->get('status') == 'started')
         {
             $query_alternative = Alternative::where('id', $alternative_id)->get(['isCorrect', 'question_id']);
@@ -24,14 +26,17 @@ class VerifyAlternativeController extends Controller
                 
             if (($request->session()->get('incorrect_answers') + $request->session()->get('correct_answers')) >= $this->_MAX_QUESTIONS_PER_PLAY)
                 return redirect()->route('pontuacao');
-
-            if (!$query_alternative[0]->isCorrect)
+    
+            $request->session()->forget('explanation');
+            $request->session()->put('explanation', $query_question[0]->explanation);
+            
+            if ($query_alternative[0]->isCorrect == 0)
+                return redirect()->route('explanation', ['text' => 'Infelizmente sua resposta está incorreta!']);
+            else
             {
-                $request->session()->forget('explanation');
-                $request->session()->put('explanation', $query_question[0]->explanation);
-                return redirect()->route('explanation');
+                $rand_num = array_rand($texts);
+                return redirect()->route('explanation', $texts[$rand_num]);
             }
-            return redirect()->route('retrieveQuestion');
         }
     }
 }

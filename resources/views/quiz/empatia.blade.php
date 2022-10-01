@@ -25,11 +25,11 @@
 
       <div class="pergunta">
          <a>
-         {{ $question }}
+         {{ Session::get('questions.'.Session::get('incorrect_answers') + Session::get('correct_answers').'.question') }}
          </a><br>
-         <img src="{{ $image }}" height="500px">
+         <img src="{{ Session::get('questions.'.Session::get('incorrect_answers') + Session::get('correct_answers').'.image') }}" height="500px">
          <div class="button-grp">
-            @foreach ($alternatives as $alternative)
+            @foreach (Session::get('alternatives.'.Session::get('incorrect_answers') + Session::get('correct_answers')) as $alternative)
                    <span id="{{ $alternative->id }}">
                     <a href=" {{ route('verifyAlternative', ['id' => $alternative->id]) }}">
                       <button type="submit" id="btn1">
