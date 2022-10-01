@@ -41,19 +41,19 @@
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Início</a>
+                  <a class="nav-link" href="{{ route('index') }}">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Sobre </a>
+                  <a class="nav-link" href="{{ route('index') }}">Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Serviços </a>
+                  <a class="nav-link" href="{{ route('index') }}">Serviços </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html"> Ajuda </a>
+                  <a class="nav-link" href="{{ route('index') }}"> Ajuda </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Contato</a>
+                  <a class="nav-link" href="{{ route('index') }}">Contato</a>
                 </li>
               </ul>
             </div>
@@ -135,8 +135,9 @@
       </div>
       <div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            O sistema desenvolvido tem como o objetivo auxiliar pessoas com TEA no aprendizado de
+           habilidades sociais e superação desses déficits por meio de quizzes, onde serão 
+           representadas histórias sociais em formato de ilustração, perguntas e respostas.
         </p>
       </div>
     </div>
@@ -145,8 +146,7 @@
   <!-- Footer -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2022 All Rights Reserved By
-      <a href="{{ route('index') }}">>SociAu</a>
+      <a href="{{ route('index') }}">SociAu</a>
     </p>
   </section>
 

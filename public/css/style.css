@@ -411,7 +411,10 @@ a:focus {
   background-color: transparent;
   color: #000000;
 }
-
+.homeb{
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
 .home_section {
   font-family: "Poppins", sans-serif;
 }
@@ -445,11 +448,13 @@ a:focus {
 .home_section .img-box img{
   -webkit-transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
+  text-decoration: none;
 }
 
 .home_section .img-box:hover img{
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  
 }
 
 .bag_logo {
@@ -494,6 +499,7 @@ a:focus {
 
 .pro_section .box .action-box a:hover {
   opacity: 1;
+
 }
 
 .pro_section .box .detail-box h4 {
@@ -706,6 +712,7 @@ a:focus {
 }
 
 .quiz_categoria{
+  color: #fff;
   width: 200px;
   height:80px;
   display: inline-block;
@@ -719,6 +726,7 @@ a:focus {
 }
 .quiz_categoria a{
   float: left;
+  font-weight: bold;
   width: 100%;
   line-height: 70px;
   font-size: 30px;
@@ -797,14 +805,13 @@ a:focus {
   border-top: 5px solid #49e8a0;
 }
 
-/* Form Adms */
 
 form#formAdd{
   width:500px;
   background:#ffffff;
   border-radius:8px;
   box-shadow:0 0 40px -10px #000;
-  margin:calc(10vh - 100px) auto;
+  margin: auto;
   padding:20px 30px;
   max-width:calc(100vw - 40px);
   box-sizing:border-box;
@@ -850,7 +857,7 @@ form#formAdd input submit{
   transition:all .3s
 }
 form#formAdd button:hover{
-  background:#78788c;
+  background:#8c8c8c;
   color:#fff
 }
 form#formAdd div{
@@ -877,7 +884,46 @@ color: #50505a;
 cursor: pointer;
 line-height: 1.1;
 background-color: rgb(255, 255, 255);
-background-image: linear-gradient(to top, #FFBE71, rgb(245, 217, 180) 33%);
+background-image: linear-gradient(to top, #b1b1af, rgb(217, 214, 214) 33%);
+}
+
+form#formAdd button {
+  width: 100%;
+  min-width: 15ch;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  color: #50505a;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to top, #b1b1af, rgb(217, 214, 214) 33%);
+}
+
+.logout button{
+  width: 5rem;
+  height: 2rem;
+  color: #828282;
+  background-color: rgb(243, 243, 243);
+  border: 1px;
+  border-radius: 1rem;
+  box-shadow: .3rem .3rem .6rem #c8d0e7,-.2rem -.2rem .5rem #FFFFFF;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.logout button:active{
+  box-shadow: .2rem .2rem .5rem #c8d0e7, inset -.2rem -.2rem .5rem #FFFFFF;
+}
+.logout button:hover{
+  color:black;
+}
+.logout{
+  width: 100%;
+  position: relative;
+  text-align: right;
 }
 .corretude {
   display: block;
@@ -987,13 +1033,11 @@ background-image: linear-gradient(to top, #FFBE71, rgb(245, 217, 180) 33%);
   text-align: center;
   font-size: 30px;
   color: #42cefe;
-  font-family: "Fredoka One",Comic-Sans
 }
 .btn-wrap button{
   text-align: center;
   font-size: 30px;
   color: #42cefe;
-  font-family: "Fredoka One",Comic-Sans;
   border-color: white;
 }
 

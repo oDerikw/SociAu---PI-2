@@ -66,7 +66,6 @@
   <!-- Footer -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2022 Todos os direitos reservados para 
       <a href=" {{ url('/') }}">SociAu</a>
     </p>
   </section>
