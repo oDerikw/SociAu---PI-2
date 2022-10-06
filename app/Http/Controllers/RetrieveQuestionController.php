@@ -9,41 +9,38 @@ use Illuminate\Support\Facades\Session;
 
 class RetrieveQuestionController extends Controller
 {
-    public function retrieve()
+    public function retrieve(Request $request)
     {   
-        // Seleciona uma questão aleatória com base na categoria selecionada
+        $request->session()->forget(['questions', 'alternatives']);
+        
+
         $category = Session::get('category');
         $difficulty = Session::get('difficulty');
         $query_question = Question::where('category', $category)->limit(5)->get(['id', 'question', 'explanation', 'image']);
 
-        if (!Session::exists('retrieved'))
+        foreach($query_question as $question)
+            Session::push('questions', $question);
+
+        switch ($difficulty)
         {
-            Session::put('retrieved', true);
-
-            foreach($query_question as $question)
-                Session::push('questions', $question);
-
-            switch ($difficulty)
-            {
-                case 'facil':
-                    foreach ($query_question as $question)
-                        Session::push('alternatives', $this->queryAlternatives($question->id, 1, 1));
-                    break;
-                    
-                case 'medio':
-                    foreach ($query_question as $question)
-                        Session::push('alternatives', $this->queryAlternatives($question->id, 2, 2));
-                    break;
-                    
-                case 'dificil':
-                    foreach ($query_question as $question)
-                        Session::push('alternatives', $this->queryAlternatives($question->id, 3, 1));
-                    break;
-            }
+            case 'facil':
+                foreach ($query_question as $question)
+                    Session::push('alternatives', $this->queryAlternatives($question->id, 1, 1));
+                break;
+                
+            case 'medio':
+                foreach ($query_question as $question)
+                    Session::push('alternatives', $this->queryAlternatives($question->id, 2, 2));
+                break;
+                
+            case 'dificil':
+                foreach ($query_question as $question)
+                    Session::push('alternatives', $this->queryAlternatives($question->id, 3, 1));
+                break;
+        }
 
             $query_question = NULL;
 
-        }
         return view('quiz/'.$category);
     }
     
@@ -70,7 +67,7 @@ class RetrieveQuestionController extends Controller
             array_push($alternatives, $correct_alt);
 
         $query_incorrect_alt = $query_correct_alt = NULL;
-
+        shuffle($alternatives);
         return $alternatives;
     }
 }
