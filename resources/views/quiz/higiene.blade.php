@@ -5,7 +5,7 @@
       <div class="topoQuiz">
          <div class="quiz_categoria" id="categoria4">
             <a>
-            Dia a Dia
+            Higiene
             </a>
          </div>
          <div class="barra" id="categoria4">
